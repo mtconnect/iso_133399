@@ -1,0 +1,25 @@
+<ASSEMBLY_DEFINITION>	<ITEM_VERSION>
+		<ITEM>
+			<MULTI_LANGUAGE_STRING>
+				<STRING_WITH_LANGUAGE>
+					<Parameter>'Milling - Endmill'</Parameter>
+					<LANGUAGE>
+						<Parameter>'eng'</Parameter>
+					</LANGUAGE>
+				</STRING_WITH_LANGUAGE>
+			</MULTI_LANGUAGE_STRING>
+			<Parameter>'BT30 - 3/8" endmill assembly'</Parameter>
+			<MULTI_LANGUAGE_STRING>
+				<STRING_WITH_LANGUAGE>
+					<Parameter>'BT30 - 3/8" endmill assembly'</Parameter>
+					<LANGUAGE>
+						<Parameter>'eng'</Parameter>
+					</LANGUAGE>
+				</STRING_WITH_LANGUAGE>
+			</MULTI_LANGUAGE_STRING>
+		</ITEM>
+		<Parameter>'BT30 - 3/8" endmill assembly-1'</Parameter>
+	</ITEM_VERSION>
+	<Parameter>'BT30 - 3/8" endmill assembly'</Parameter>
+	<Parameter>'design assembly'</Parameter>
+</ASSEMBLY_DEFINITION>

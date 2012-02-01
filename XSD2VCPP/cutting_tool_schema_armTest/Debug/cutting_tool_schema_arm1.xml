@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;">
+	<Organization id="id-1">
+		<Delivery_address>Someotherstreet 2, Sometown, Sweden</Delivery_address>
+		<Organization_name>CTC -Cutting Tool Company</Organization_name>
+		<Organization_type>company</Organization_type>
+		<Delivery_address>Someotherstreet 2, Sometown, Sweden</Delivery_address>
+		<Id>SE556677889901</Id>
+		<Postal_address>Box 0000, Sometown, Sweden</Postal_address>
+		<Visitor_address>Somestreet 1,Sometown, Sweden</Visitor_address>
+	</Organization>
+	<State id="id-3">
+		<Name>Blunt edge</Name>
+	</State>
+	<Item_characteristic_association id="id-4">
+		<Associated_item>
+			<Item_definition ref="id-6" xsi:nil="true"/>
+		</Associated_item>
+		<Associated_characteristic>
+			<Grade ref="id-5" xsi:nil="true"/>
+		</Associated_characteristic>
+	</Item_characteristic_association>
+</uos>

@@ -1,0 +1,2379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" xmlns:exp="ExpressHeader">
+	
+<xs:import schemaLocation="p21_hdr.xsd" namespace="ExpressHeader"/>
+<xs:attribute name="id" type="xs:ID"/>
+<xs:attribute name="ref" type="xs:string"/>
+
+	 <xs:element name="Alias_identification" type="Alias_identification" nillable="true" />
+	 <xs:complexType name="Alias_identification">
+		<xs:sequence>
+		<xs:element name="Alias_id" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		<xs:element name="Alias_scope"  minOccurs="0" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Organization" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Alias_version_id" type="xs:string" minOccurs="0" maxOccurs="1"/>
+		<xs:element name="Description"  minOccurs="0" maxOccurs="1">
+			<xs:complexType>
+				<xs:choice>
+					<xs:element ref="Default_language_string"/>
+					<xs:element ref="Multi_language_string"/>
+				</xs:choice>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Is_applied_to"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:choice>
+					<xs:element ref="Item"/>
+					<xs:element ref="Item_version"/>
+					<xs:element ref="Item_definition"/>
+					<xs:element ref="Property"/>
+					<xs:element ref="Grade"/>
+					<xs:element ref="Classification_attribute"/>
+					<xs:element ref="Classification_system"/>
+					<xs:element ref="Document"/>
+					<xs:element ref="Document_representation"/>
+					<xs:element ref="Document_version"/>
+					<xs:element ref="General_classification"/>
+					<xs:element ref="Item_instance"/>
+					<xs:element ref="Organization"/>
+					<xs:element ref="Document_type_property"/>
+				</xs:choice>
+			</xs:complexType>
+		</xs:element>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Application_context" type="Application_context" nillable="true" />
+	 <xs:complexType name="Application_context">
+		<xs:sequence>
+		<xs:element name="Application_domain" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		<xs:element name="Description"  minOccurs="0" maxOccurs="1">
+			<xs:complexType>
+				<xs:choice>
+					<xs:element ref="Default_language_string"/>
+					<xs:element ref="Multi_language_string"/>
+				</xs:choice>
+			</xs:complexType>
+		</xs:element>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Assembly_association" type="Assembly_association" nillable="true" />
+	 <xs:complexType name="Assembly_association">
+		<xs:complexContent>
+		<xs:extension base="Item_structure_association">
+		</xs:extension>
+		</xs:complexContent>
+	 </xs:complexType>
+
+	 <xs:element name="Assembly_definition" type="Assembly_definition" nillable="true" />
+	 <xs:complexType name="Assembly_definition">
+		<xs:complexContent>
+		<xs:extension base="Item_definition">
+			<xs:sequence>
+			<xs:element name="Assembly_type" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			</xs:sequence>
+		</xs:extension>
+		</xs:complexContent>
+	 </xs:complexType>
+
+	 <xs:element name="Cartesian_coordinate_space" type="Cartesian_coordinate_space" nillable="true" />
+	 <xs:complexType name="Cartesian_coordinate_space">
+		<xs:sequence>
+		<xs:element name="Unit_of_values" >
+			<xs:complexType>
+				<xs:choice maxOccurs="unbounded">
+				<xs:element ref="Unit"/>
+				</xs:choice>
+			</xs:complexType>
+		</xs:element>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Cartesian_coordinate_space_2d" type="Cartesian_coordinate_space_2d" nillable="true" />
+	 <xs:complexType name="Cartesian_coordinate_space_2d">
+		<xs:complexContent>
+		<xs:extension base="Cartesian_coordinate_space">
+		</xs:extension>
+		</xs:complexContent>
+	 </xs:complexType>
+
+	 <xs:element name="Cartesian_coordinate_space_3d" type="Cartesian_coordinate_space_3d" nillable="true" />
+	 <xs:complexType name="Cartesian_coordinate_space_3d">
+		<xs:complexContent>
+		<xs:extension base="Cartesian_coordinate_space">
+		</xs:extension>
+		</xs:complexContent>
+	 </xs:complexType>
+
+	 <xs:element name="Cartesian_point" type="Cartesian_point" nillable="true" />
+	 <xs:complexType name="Cartesian_point">
+		<xs:sequence>
+		<xs:element name="Coordinates" >
+			<xs:simpleType>
+				<xs:restriction>
+					<xs:simpleType>
+						<xs:list itemType="xs:double"/>
+					</xs:simpleType>
+				<xs:minLength value="1"/>
+				<xs:maxLength value="3"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:element >
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Classification_association" type="Classification_association" nillable="true" />
+	 <xs:complexType name="Classification_association">
+		<xs:sequence>
+		<xs:element name="Associated_classification"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="General_classification" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Classified_element"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:choice>
+					<xs:element ref="Item_version"/>
+					<xs:element ref="Item"/>
+					<xs:element ref="Item_definition"/>
+					<xs:element ref="Document"/>
+					<xs:element ref="Property"/>
+					<xs:element ref="Property_value_association"/>
+					<xs:element ref="Item_instance"/>
+					<xs:element ref="Document_file"/>
+					<xs:element ref="Document_version"/>
+					<xs:element ref="Document_representation"/>
+					<xs:element ref="Material_designation"/>
+				</xs:choice>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Defintional" type="xs:boolean" minOccurs="0" maxOccurs="1"/>
+		<xs:element name="Role" type="xs:string" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Classification_association_relationship" type="Classification_association_relationship" nillable="true" />
+	 <xs:complexType name="Classification_association_relationship">
+		<xs:sequence>
+		<xs:element name="Related"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Classification_association" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Relating"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Classification_association" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Relationship_type" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Classification_attribute" type="Classification_attribute" nillable="true" />
+	 <xs:complexType name="Classification_attribute">
+		<xs:sequence>
+		<xs:element name="Allowed_value" >
+			<xs:complexType>
+				<xs:choice maxOccurs="unbounded">
+				<xs:element ref="Property_value_representation"/>
+				</xs:choice>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Associated_classification"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="General_classification" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Attribute_definition"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Property" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Description"  minOccurs="0" maxOccurs="1">
+			<xs:complexType>
+				<xs:choice>
+					<xs:element ref="Default_language_string"/>
+					<xs:element ref="Multi_language_string"/>
+				</xs:choice>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Id" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		<xs:element name="Name"  minOccurs="0" maxOccurs="1">
+			<xs:complexType>
+				<xs:choice>
+					<xs:element ref="Default_language_string"/>
+					<xs:element ref="Multi_language_string"/>
+				</xs:choice>
+			</xs:complexType>
+		</xs:element>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Classification_system" type="Classification_system" nillable="true" />
+	 <xs:complexType name="Classification_system">
+		<xs:sequence>
+		<xs:element name="Description"  minOccurs="0" maxOccurs="1">
+			<xs:complexType>
+				<xs:choice>
+					<xs:element ref="Default_language_string"/>
+					<xs:element ref="Multi_language_string"/>
+				</xs:choice>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Id" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Coating" type="Coating" nillable="true" />
+	 <xs:complexType name="Coating">
+		<xs:sequence>
+		<xs:element name="Coating_name" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		<xs:element name="Coating_process" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Coupling" type="Coupling" nillable="true" />
+	 <xs:complexType name="Coupling">
+		<xs:sequence>
+		<xs:element name="Coupling_type" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		<xs:element name="Pieces"  minOccurs="0" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Numerical_value" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Side" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		<xs:element name="Size"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Numerical_value" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Style" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Cutting_condition" type="Cutting_condition" nillable="true" />
+	 <xs:complexType name="Cutting_condition">
+		<xs:sequence>
+		<xs:element name="Condition_name" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Cutting_data_association" type="Cutting_data_association" nillable="true" />
+	 <xs:complexType name="Cutting_data_association">
+		<xs:sequence>
+		<xs:element name="Associated_material"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Material_designation" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Depth_of_cut"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Value_with_unit" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Feed"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Value_with_unit" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Speed"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Value_with_unit" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Date_time" type="Date_time" nillable="true" />
+	 <xs:complexType name="Date_time">
+		<xs:sequence>
+		<xs:element name="Date" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		<xs:element name="Time" type="xs:string" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Digital_document" type="Digital_document" nillable="true" />
+	 <xs:complexType name="Digital_document">
+		<xs:complexContent>
+		<xs:extension base="Document_representation">
+			<xs:sequence>
+			<xs:element name="File" >
+				<xs:complexType>
+					<xs:choice maxOccurs="unbounded">
+					<xs:element ref="Digital_file"/>
+					</xs:choice>
+				</xs:complexType>
+			</xs:element>
+			</xs:sequence>
+		</xs:extension>
+		</xs:complexContent>
+	 </xs:complexType>
+
+	 <xs:element name="Digital_file" type="Digital_file" nillable="true" />
+	 <xs:complexType name="Digital_file">
+		<xs:complexContent>
+		<xs:extension base="Document_file">
+		</xs:extension>
+		</xs:complexContent>
+	 </xs:complexType>
+
+	 <xs:element name="Din4000_reference" type="Din4000_reference" nillable="true" />
+	 <xs:complexType name="Din4000_reference">
+		<xs:complexContent>
+		<xs:extension base="External_library_reference">
+			<xs:sequence>
+			<xs:element name="Characteristics_code_no" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="Part_no" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			</xs:sequence>
+		</xs:extension>
+		</xs:complexContent>
+	 </xs:complexType>
+
+	 <xs:element name="Direction" type="Direction" nillable="true" />
+	 <xs:complexType name="Direction">
+		<xs:sequence>
+		<xs:element name="Direction_ratios" >
+			<xs:simpleType>
+				<xs:restriction>
+					<xs:simpleType>
+						<xs:list itemType="xs:double"/>
+					</xs:simpleType>
+				<xs:minLength value="2"/>
+				<xs:maxLength value="3"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:element >
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Document" type="Document" nillable="true" />
+	 <xs:complexType name="Document">
+		<xs:sequence>
+		<xs:element name="Description"  minOccurs="0" maxOccurs="1">
+			<xs:complexType>
+				<xs:choice>
+					<xs:element ref="Default_language_string"/>
+					<xs:element ref="Multi_language_string"/>
+				</xs:choice>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Document_id" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		<xs:element name="Name"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:choice>
+					<xs:element ref="Default_language_string"/>
+					<xs:element ref="Multi_language_string"/>
+				</xs:choice>
+			</xs:complexType>
+		</xs:element>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Document_assignment" type="Document_assignment" nillable="true" />
+	 <xs:complexType name="Document_assignment">
+		<xs:sequence>
+		<xs:element name="Assigned_document"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:choice>
+					<xs:element ref="Document_version"/>
+					<xs:element ref="Document"/>
+				</xs:choice>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Is_assigned_to"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:choice>
+					<xs:element ref="Item"/>
+					<xs:element ref="Item_version"/>
+					<xs:element ref="Classification_attribute"/>
+					<xs:element ref="Classification_system"/>
+					<xs:element ref="Item_definition"/>
+					<xs:element ref="General_classification"/>
+					<xs:element ref="Item_structure_association"/>
+					<xs:element ref="Item_instance"/>
+					<xs:element ref="Organization"/>
+					<xs:element ref="Person"/>
+					<xs:element ref="Property"/>
+					<xs:element ref="Specific_item_classification"/>
+					<xs:element ref="Material_designation"/>
+					<xs:element ref="Mated_item_relationship"/>
+					<xs:element ref="Physical_item_structure_association"/>
+				</xs:choice>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Role" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Document_content_property" type="Document_content_property" nillable="true" />
+	 <xs:complexType name="Document_content_property">
+		<xs:sequence>
+		<xs:element name="Detail_level" type="xs:string" minOccurs="0" maxOccurs="1"/>
+		<xs:element name="Geometry_type" type="xs:string" minOccurs="0" maxOccurs="1"/>
+		<xs:element name="Languages" >
+			<xs:complexType>
+				<xs:choice maxOccurs="unbounded">
+				<xs:element ref="Language"/>
+				</xs:choice>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Real_world_scale"  minOccurs="0" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Numerical_value" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Document_creation_property" type="Document_creation_property" nillable="true" />
+	 <xs:complexType name="Document_creation_property">
+		<xs:sequence>
+		<xs:element name="Creating_interface" type="xs:string" minOccurs="0" maxOccurs="1"/>
+		<xs:element name="Creating_system" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		<xs:element name="Operating_system" type="xs:string" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Document_file" type="Document_file" nillable="true" />
+	 <xs:complexType name="Document_file">
+		<xs:sequence>
+		<xs:element name="Content"  minOccurs="0" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Document_content_property" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Creation"  minOccurs="0" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Document_creation_property" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Document_file_type"  minOccurs="0" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Document_type_property" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="External_id_and_location" >
+			<xs:complexType>
+				<xs:choice maxOccurs="unbounded">
+				<xs:element ref="External_file_id_and_location"/>
+				</xs:choice>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="File_format"  minOccurs="0" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Document_format_property" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="File_id" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		<xs:element name="Size"  minOccurs="0" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Document_size_property" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Version_id" type="xs:string" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Document_format_property" type="Document_format_property" nillable="true" />
+	 <xs:complexType name="Document_format_property">
+		<xs:sequence>
+		<xs:element name="Character_code" type="xs:string" minOccurs="0" maxOccurs="1"/>
+		<xs:element name="Data_format" type="xs:string" minOccurs="0" maxOccurs="1"/>
+		<xs:element name="Size_format"  minOccurs="0" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Rectangular_size" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Document_location_property" type="Document_location_property" nillable="true" />
+	 <xs:complexType name="Document_location_property">
+		<xs:sequence>
+		<xs:element name="Location_name" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Document_representation" type="Document_representation" nillable="true" />
+	 <xs:complexType name="Document_representation">
+		<xs:sequence>
+		<xs:element name="Associated_document_version"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Document_version" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Common_location" >
+			<xs:complexType>
+				<xs:choice maxOccurs="unbounded">
+				<xs:element ref="Document_location_property"/>
+				</xs:choice>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Content"  minOccurs="0" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Document_content_property" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Creation"  minOccurs="0" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Document_creation_property" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Description"  minOccurs="0" maxOccurs="1">
+			<xs:complexType>
+				<xs:choice>
+					<xs:element ref="Default_language_string"/>
+					<xs:element ref="Multi_language_string"/>
+				</xs:choice>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Id" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		<xs:element name="Representation_format"  minOccurs="0" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Document_format_property" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Size"  minOccurs="0" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Document_size_property" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Document_size_property" type="Document_size_property" nillable="true" />
+	 <xs:complexType name="Document_size_property">
+		<xs:sequence>
+		<xs:element name="File_size"  minOccurs="0" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Value_with_unit" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Page_count"  minOccurs="0" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Value_with_unit" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Document_type_property" type="Document_type_property" nillable="true" />
+	 <xs:complexType name="Document_type_property">
+		<xs:sequence>
+		<xs:element name="Document_type_name" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		<xs:element name="Used_classification_system"  minOccurs="0" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Classification_system" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Document_version" type="Document_version" nillable="true" />
+	 <xs:complexType name="Document_version">
+		<xs:sequence>
+		<xs:element name="Associated_document"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Document" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Description"  minOccurs="0" maxOccurs="1">
+			<xs:complexType>
+				<xs:choice>
+					<xs:element ref="Default_language_string"/>
+					<xs:element ref="Multi_language_string"/>
+				</xs:choice>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Id" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Document_version_relationship" type="Document_version_relationship" nillable="true" />
+	 <xs:complexType name="Document_version_relationship">
+		<xs:sequence>
+		<xs:element name="Description"  minOccurs="0" maxOccurs="1">
+			<xs:complexType>
+				<xs:choice>
+					<xs:element ref="Default_language_string"/>
+					<xs:element ref="Multi_language_string"/>
+				</xs:choice>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Related"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Document_version" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Relating"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Document_version" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Relation_type" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Duration" type="Duration" nillable="true" />
+	 <xs:complexType name="Duration">
+		<xs:sequence>
+		<xs:element name="Time" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		<xs:element name="Time_unit" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Effectivity" type="Effectivity" nillable="true" />
+	 <xs:complexType name="Effectivity">
+		<xs:sequence>
+		<xs:element name="Concerned_organization" >
+			<xs:complexType>
+				<xs:choice maxOccurs="unbounded">
+				<xs:element ref="Organization"/>
+				</xs:choice>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Description"  minOccurs="0" maxOccurs="1">
+			<xs:complexType>
+				<xs:choice>
+					<xs:element ref="Default_language_string"/>
+					<xs:element ref="Multi_language_string"/>
+				</xs:choice>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Effectivity_context" type="xs:string" minOccurs="0" maxOccurs="1"/>
+		<xs:element name="End_definition"  minOccurs="0" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Date_time" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Id" type="xs:string" minOccurs="0" maxOccurs="1"/>
+		<xs:element name="Period"  minOccurs="0" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Duration" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Start_definition"  minOccurs="0" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Date_time" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Version_id" type="xs:string" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Effectivity_assignment" type="Effectivity_assignment" nillable="true" />
+	 <xs:complexType name="Effectivity_assignment">
+		<xs:sequence>
+		<xs:element name="Assigned_effectivity"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Effectivity" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Effective_element"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:choice>
+					<xs:element ref="Document"/>
+					<xs:element ref="Classification_system"/>
+					<xs:element ref="Document_file"/>
+					<xs:element ref="Document_representation"/>
+					<xs:element ref="Document_version"/>
+					<xs:element ref="Item"/>
+					<xs:element ref="Item_version"/>
+					<xs:element ref="Item_instance"/>
+					<xs:element ref="Property"/>
+					<xs:element ref="Property_value_association"/>
+					<xs:element ref="Material_designation"/>
+					<xs:element ref="Item_structure_association"/>
+					<xs:element ref="Realized_item_association"/>
+					<xs:element ref="Physical_item_state_association"/>
+					<xs:element ref="Physical_item_location_association"/>
+					<xs:element ref="Physical_item_structure_association"/>
+				</xs:choice>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Effectivity_indication" type="xs:boolean" minOccurs="1" maxOccurs="1"/>
+		<xs:element name="Role" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Effectivity_relationship" type="Effectivity_relationship" nillable="true" />
+	 <xs:complexType name="Effectivity_relationship">
+		<xs:sequence>
+		<xs:element name="Description"  minOccurs="0" maxOccurs="1">
+			<xs:complexType>
+				<xs:choice>
+					<xs:element ref="Default_language_string"/>
+					<xs:element ref="Multi_language_string"/>
+				</xs:choice>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Related"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Effectivity" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Relating"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Effectivity" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Relation_type" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="External_file_id_and_location" type="External_file_id_and_location" nillable="true" />
+	 <xs:complexType name="External_file_id_and_location">
+		<xs:sequence>
+		<xs:element name="External_id" type="xs:string" minOccurs="0" maxOccurs="1"/>
+		<xs:element name="Location"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Document_location_property" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="External_geometric_model" type="External_geometric_model" nillable="true" />
+	 <xs:complexType name="External_geometric_model">
+		<xs:complexContent>
+		<xs:extension base="External_model">
+			<xs:sequence>
+			<xs:element name="Model_extent" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			</xs:sequence>
+		</xs:extension>
+		</xs:complexContent>
+	 </xs:complexType>
+
+	 <xs:element name="External_library_reference" type="External_library_reference" nillable="true" />
+	 <xs:complexType name="External_library_reference">
+		<xs:sequence>
+		<xs:element name="Description"  minOccurs="0" maxOccurs="1">
+			<xs:complexType>
+				<xs:choice>
+					<xs:element ref="Default_language_string"/>
+					<xs:element ref="Multi_language_string"/>
+				</xs:choice>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="External_id" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		<xs:element name="Library_type" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="External_model" type="External_model" nillable="true" />
+	 <xs:complexType name="External_model">
+		<xs:sequence>
+		<xs:element name="Description"  minOccurs="0" maxOccurs="1">
+			<xs:complexType>
+				<xs:choice>
+					<xs:element ref="Default_language_string"/>
+					<xs:element ref="Multi_language_string"/>
+				</xs:choice>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Is_defined_as"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Digital_file" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Is_defined_in"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Cartesian_coordinate_space" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Model_id" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="External_picture" type="External_picture" nillable="true" />
+	 <xs:complexType name="External_picture">
+		<xs:complexContent>
+		<xs:extension base="External_model">
+		</xs:extension>
+		</xs:complexContent>
+	 </xs:complexType>
+
+	 <xs:element name="Fitting_bounds" type="Fitting_bounds" nillable="true" />
+	 <xs:complexType name="Fitting_bounds">
+		<xs:sequence>
+		<xs:element name="Lower_bound" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		<xs:element name="Significant_digits" type="xs:string" minOccurs="0" maxOccurs="1"/>
+		<xs:element name="Upper_bound" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		<xs:element name="Value_determination" type="xs:string" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="General_classification" type="General_classification" nillable="true" />
+	 <xs:complexType name="General_classification">
+		<xs:sequence>
+		<xs:element name="Classification_source"  minOccurs="0" maxOccurs="1">
+			<xs:complexType>
+				<xs:choice>
+					<xs:element ref="Plib_class_reference"/>
+					<xs:element ref="Document"/>
+					<xs:element ref="External_library_reference"/>
+				</xs:choice>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Description"  minOccurs="0" maxOccurs="1">
+			<xs:complexType>
+				<xs:choice>
+					<xs:element ref="Default_language_string"/>
+					<xs:element ref="Multi_language_string"/>
+				</xs:choice>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Id" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		<xs:element name="Used_classification_system"  minOccurs="0" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Classification_system" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Version_id" type="xs:string" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="General_classification_hierarchy" type="General_classification_hierarchy" nillable="true" />
+	 <xs:complexType name="General_classification_hierarchy">
+		<xs:sequence>
+		<xs:element name="Sub_classification"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="General_classification" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Super_classification"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="General_classification" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Geometric_model_relationship_with_transformation" type="Geometric_model_relationship_with_transformation" nillable="true" />
+	 <xs:complexType name="Geometric_model_relationship_with_transformation">
+		<xs:sequence>
+		<xs:element name="Description"  minOccurs="0" maxOccurs="1">
+			<xs:complexType>
+				<xs:choice>
+					<xs:element ref="Default_language_string"/>
+					<xs:element ref="Multi_language_string"/>
+				</xs:choice>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Model_placement"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Transformation" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Related"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="External_model" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Relating"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="External_model" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Relation_type" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Grade" type="Grade" nillable="true" />
+	 <xs:complexType name="Grade">
+		<xs:sequence>
+		<xs:element name="Coating"  minOccurs="0" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Coating" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Cutting_condition" >
+			<xs:complexType>
+				<xs:choice maxOccurs="unbounded">
+				<xs:element ref="Cutting_condition"/>
+				</xs:choice>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Identifier" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		<xs:element name="Standard_designation" type="xs:string" minOccurs="0" maxOccurs="1"/>
+		<xs:element name="Substrate"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Substrate" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Workpiece_material" >
+			<xs:complexType>
+				<xs:choice maxOccurs="unbounded">
+				<xs:element ref="Material_designation"/>
+				</xs:choice>
+			</xs:complexType>
+		</xs:element>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Grade_relationship" type="Grade_relationship" nillable="true" />
+	 <xs:complexType name="Grade_relationship">
+		<xs:sequence>
+		<xs:element name="Related"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Grade" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Relating"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Grade" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Relation_type" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Item" type="Item" nillable="true" />
+	 <xs:complexType name="Item">
+		<xs:sequence>
+		<xs:element name="Description"  minOccurs="0" maxOccurs="1">
+			<xs:complexType>
+				<xs:choice>
+					<xs:element ref="Default_language_string"/>
+					<xs:element ref="Multi_language_string"/>
+				</xs:choice>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Id" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		<xs:element name="Name"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:choice>
+					<xs:element ref="Default_language_string"/>
+					<xs:element ref="Multi_language_string"/>
+				</xs:choice>
+			</xs:complexType>
+		</xs:element>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Item_characteristic_association" type="Item_characteristic_association" nillable="true" />
+	 <xs:complexType name="Item_characteristic_association">
+		<xs:sequence>
+		<xs:element name="Associated_characteristic"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:choice>
+					<xs:element ref="Cutting_condition"/>
+					<xs:element ref="Coupling"/>
+					<xs:element ref="Workpiece_feature"/>
+					<xs:element ref="Material_designation"/>
+					<xs:element ref="Cutting_data_association"/>
+					<xs:element ref="Grade"/>
+				</xs:choice>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Associated_item"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Item_definition" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Relation_type" type="xs:string" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Item_definition" type="Item_definition" nillable="true" />
+	 <xs:complexType name="Item_definition">
+		<xs:sequence>
+		<xs:element name="Associated_item_version"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Item_version" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Contexts" >
+			<xs:complexType>
+				<xs:choice maxOccurs="unbounded">
+				<xs:element ref="Application_context"/>
+				</xs:choice>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Id" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		<xs:element name="Name"  minOccurs="0" maxOccurs="1">
+			<xs:complexType>
+				<xs:choice>
+					<xs:element ref="Default_language_string"/>
+					<xs:element ref="Multi_language_string"/>
+				</xs:choice>
+			</xs:complexType>
+		</xs:element>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Item_definition_relationship" type="Item_definition_relationship" nillable="true" />
+	 <xs:complexType name="Item_definition_relationship">
+		<xs:sequence>
+		<xs:element name="Description"  minOccurs="0" maxOccurs="1">
+			<xs:complexType>
+				<xs:choice>
+					<xs:element ref="Default_language_string"/>
+					<xs:element ref="Multi_language_string"/>
+				</xs:choice>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Related"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Item_definition" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Relating"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Item_definition" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Relation_type" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Item_instance" type="Item_instance" nillable="true" />
+	 <xs:complexType name="Item_instance">
+		<xs:sequence>
+		<xs:element name="Definition"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Item_definition" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Description"  minOccurs="0" maxOccurs="1">
+			<xs:complexType>
+				<xs:choice>
+					<xs:element ref="Default_language_string"/>
+					<xs:element ref="Multi_language_string"/>
+				</xs:choice>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Id" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Item_structure_association" type="Item_structure_association" nillable="true" />
+	 <xs:complexType name="Item_structure_association">
+		<xs:sequence>
+		<xs:element name="Placement"  minOccurs="0" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Geometric_model_relationship_with_transformation" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Related"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Item_instance" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Relating"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Item_definition" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Item_version" type="Item_version" nillable="true" />
+	 <xs:complexType name="Item_version">
+		<xs:sequence>
+		<xs:element name="Associated_item"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Item" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Description"  minOccurs="0" maxOccurs="1">
+			<xs:complexType>
+				<xs:choice>
+					<xs:element ref="Default_language_string"/>
+					<xs:element ref="Multi_language_string"/>
+				</xs:choice>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Id" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Item_version_relationship" type="Item_version_relationship" nillable="true" />
+	 <xs:complexType name="Item_version_relationship">
+		<xs:sequence>
+		<xs:element name="Description"  minOccurs="0" maxOccurs="1">
+			<xs:complexType>
+				<xs:choice>
+					<xs:element ref="Default_language_string"/>
+					<xs:element ref="Multi_language_string"/>
+				</xs:choice>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Related"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Item_version" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Relating"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Item_version" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Relation_type" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Language" type="Language" nillable="true" />
+	 <xs:complexType name="Language">
+		<xs:sequence>
+		<xs:element name="Country_code" type="xs:string" minOccurs="0" maxOccurs="1"/>
+		<xs:element name="Language_code" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Limits_and_fits" type="Limits_and_fits" nillable="true" />
+	 <xs:complexType name="Limits_and_fits">
+		<xs:sequence>
+		<xs:element name="Deviation" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		<xs:element name="Fitting_type" type="xs:string" minOccurs="0" maxOccurs="1"/>
+		<xs:element name="Grade" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Location" type="Location" nillable="true" />
+	 <xs:complexType name="Location">
+		<xs:sequence>
+		<xs:element name="Location_id" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		<xs:element name="Location_name" type="xs:string" minOccurs="0" maxOccurs="1"/>
+		<xs:element name="Location_type" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Mated_item_relationship" type="Mated_item_relationship" nillable="true" />
+	 <xs:complexType name="Mated_item_relationship">
+		<xs:sequence>
+		<xs:element name="Mating_material" >
+			<xs:complexType>
+				<xs:choice maxOccurs="unbounded">
+				<xs:element ref="Item_instance"/>
+				<xs:element ref="Quantified_instance"/>
+				</xs:choice>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Related"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Mating_association" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Relating"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Mating_association" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Material_designation" type="Material_designation" nillable="true" />
+	 <xs:complexType name="Material_designation">
+		<xs:sequence>
+		<xs:element name="Material_name" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Mating_association" type="Mating_association" nillable="true" />
+	 <xs:complexType name="Mating_association">
+		<xs:complexContent>
+		<xs:extension base="Item_structure_association">
+		</xs:extension>
+		</xs:complexContent>
+	 </xs:complexType>
+
+	 <xs:element name="Mating_definition" type="Mating_definition" nillable="true" />
+	 <xs:complexType name="Mating_definition">
+		<xs:complexContent>
+		<xs:extension base="Item_definition">
+			<xs:sequence>
+			<xs:element name="Mating_type" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			</xs:sequence>
+		</xs:extension>
+		</xs:complexContent>
+	 </xs:complexType>
+
+	 <xs:element name="Multi_language_string" type="Multi_language_string" nillable="true" />
+	 <xs:complexType name="Multi_language_string">
+		<xs:sequence>
+		<xs:element name="Additional_language_string" >
+			<xs:complexType>
+				<xs:choice maxOccurs="unbounded">
+				<xs:element ref="String_with_language"/>
+				</xs:choice>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Primary_language_string"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="String_with_language" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Named_size" type="Named_size" nillable="true" />
+	 <xs:complexType name="Named_size">
+		<xs:complexContent>
+		<xs:extension base="Rectangular_size">
+			<xs:sequence>
+			<xs:element name="Referenced_standard"  minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element ref="Classification_system" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Size" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			</xs:sequence>
+		</xs:extension>
+		</xs:complexContent>
+	 </xs:complexType>
+
+	 <xs:element name="Numerical_value" type="Numerical_value" nillable="true" />
+	 <xs:complexType name="Numerical_value">
+		<xs:complexContent>
+		<xs:extension base="Value_with_unit">
+			<xs:sequence>
+			<xs:element name="Value_component" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			</xs:sequence>
+		</xs:extension>
+		</xs:complexContent>
+	 </xs:complexType>
+
+	 <xs:element name="Organization" type="Organization" nillable="true" />
+	 <xs:complexType name="Organization">
+		<xs:sequence>
+		<xs:element name="Delivery_address" type="xs:string" minOccurs="0" maxOccurs="1"/>
+		<xs:element name="Id" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		<xs:element name="Organization_name" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		<xs:element name="Organization_type" type="xs:string" minOccurs="0" maxOccurs="1"/>
+		<xs:element name="Postal_address" type="xs:string" minOccurs="0" maxOccurs="1"/>
+		<xs:element name="Visitor_address" type="xs:string" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Person" type="Person" nillable="true" />
+	 <xs:complexType name="Person">
+		<xs:sequence>
+		<xs:element name="Person_name" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		<xs:element name="Preferred_business_address" type="xs:string" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Person_in_organization" type="Person_in_organization" nillable="true" />
+	 <xs:complexType name="Person_in_organization">
+		<xs:sequence>
+		<xs:element name="Associated_organization"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Organization" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Associated_person"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Person" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Id" type="xs:string" minOccurs="0" maxOccurs="1"/>
+		<xs:element name="Location" type="xs:string" minOccurs="0" maxOccurs="1"/>
+		<xs:element name="Role" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Person_organization_assignment" type="Person_organization_assignment" nillable="true" />
+	 <xs:complexType name="Person_organization_assignment">
+		<xs:sequence>
+		<xs:element name="Assigned_person_organization"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:choice>
+					<xs:element ref="Organization"/>
+					<xs:element ref="Person_in_organization"/>
+				</xs:choice>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Description"  minOccurs="0" maxOccurs="1">
+			<xs:complexType>
+				<xs:choice>
+					<xs:element ref="Default_language_string"/>
+					<xs:element ref="Multi_language_string"/>
+				</xs:choice>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Is_applied_to" >
+			<xs:complexType>
+				<xs:choice maxOccurs="unbounded">
+					<xs:element ref="Classification_association"/>
+					<xs:element ref="Classification_system"/>
+					<xs:element ref="Item_definition"/>
+					<xs:element ref="Document"/>
+					<xs:element ref="Document_file"/>
+					<xs:element ref="Document_representation"/>
+					<xs:element ref="Document_version"/>
+					<xs:element ref="General_classification"/>
+					<xs:element ref="Item"/>
+					<xs:element ref="Item_structure_association"/>
+					<xs:element ref="Item_instance"/>
+					<xs:element ref="Item_version"/>
+					<xs:element ref="Item_version_relationship"/>
+					<xs:element ref="Person_in_organization"/>
+					<xs:element ref="Property"/>
+					<xs:element ref="Property_value_association"/>
+					<xs:element ref="Material_designation"/>
+					<xs:element ref="Physical_item_structure_association"/>
+				</xs:choice>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Role" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Physical_document" type="Physical_document" nillable="true" />
+	 <xs:complexType name="Physical_document">
+		<xs:complexContent>
+		<xs:extension base="Document_representation">
+			<xs:sequence>
+			<xs:element name="File" >
+				<xs:complexType>
+					<xs:choice maxOccurs="unbounded">
+					<xs:element ref="Physical_file"/>
+					</xs:choice>
+				</xs:complexType>
+			</xs:element>
+			</xs:sequence>
+		</xs:extension>
+		</xs:complexContent>
+	 </xs:complexType>
+
+	 <xs:element name="Physical_file" type="Physical_file" nillable="true" />
+	 <xs:complexType name="Physical_file">
+		<xs:complexContent>
+		<xs:extension base="Document_file">
+		</xs:extension>
+		</xs:complexContent>
+	 </xs:complexType>
+
+	 <xs:element name="Physical_item" type="Physical_item" nillable="true" />
+	 <xs:complexType name="Physical_item">
+		<xs:complexContent>
+		<xs:extension base="Item">
+		</xs:extension>
+		</xs:complexContent>
+	 </xs:complexType>
+
+	 <xs:element name="Physical_item_definition" type="Physical_item_definition" nillable="true" />
+	 <xs:complexType name="Physical_item_definition">
+		<xs:complexContent>
+		<xs:extension base="Item_definition">
+		</xs:extension>
+		</xs:complexContent>
+	 </xs:complexType>
+
+	 <xs:element name="Physical_item_location_association" type="Physical_item_location_association" nillable="true" />
+	 <xs:complexType name="Physical_item_location_association">
+		<xs:sequence>
+		<xs:element name="Located_item"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Physical_item" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Location"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Location" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Physical_item_state_association" type="Physical_item_state_association" nillable="true" />
+	 <xs:complexType name="Physical_item_state_association">
+		<xs:sequence>
+		<xs:element name="Associated_physical_item"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Physical_item_definition" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Associated_state"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="State" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Role" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Physical_item_structure_association" type="Physical_item_structure_association" nillable="true" />
+	 <xs:complexType name="Physical_item_structure_association">
+		<xs:sequence>
+		<xs:element name="Related"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Physical_item_definition" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Relating"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Physical_item_definition" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Physical_item_version" type="Physical_item_version" nillable="true" />
+	 <xs:complexType name="Physical_item_version">
+		<xs:complexContent>
+		<xs:extension base="Item_version">
+		</xs:extension>
+		</xs:complexContent>
+	 </xs:complexType>
+
+	 <xs:element name="Plib_class_reference" type="Plib_class_reference" nillable="true" />
+	 <xs:complexType name="Plib_class_reference">
+		<xs:sequence>
+		<xs:element name="Code" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		<xs:element name="Supplier_bsu" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		<xs:element name="Version" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Plib_property_reference" type="Plib_property_reference" nillable="true" />
+	 <xs:complexType name="Plib_property_reference">
+		<xs:sequence>
+		<xs:element name="Code" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		<xs:element name="Name_scope"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Plib_class_reference" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Version" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Plus_minus_bounds" type="Plus_minus_bounds" nillable="true" />
+	 <xs:complexType name="Plus_minus_bounds">
+		<xs:sequence>
+		<xs:element name="Lower_bound" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		<xs:element name="Significant_digits" type="xs:string" minOccurs="0" maxOccurs="1"/>
+		<xs:element name="Upper_bound" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		<xs:element name="Value_determination" type="xs:string" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Property" type="Property" nillable="true" />
+	 <xs:complexType name="Property">
+		<xs:sequence>
+		<xs:element name="Allowed_unit" >
+			<xs:complexType>
+				<xs:choice maxOccurs="unbounded">
+				<xs:element ref="Unit"/>
+				</xs:choice>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Description"  minOccurs="0" maxOccurs="1">
+			<xs:complexType>
+				<xs:choice>
+					<xs:element ref="Default_language_string"/>
+					<xs:element ref="Multi_language_string"/>
+				</xs:choice>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Id" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		<xs:element name="Property_source"  minOccurs="0" maxOccurs="1">
+			<xs:complexType>
+				<xs:choice>
+					<xs:element ref="Plib_property_reference"/>
+					<xs:element ref="External_library_reference"/>
+					<xs:element ref="Document"/>
+				</xs:choice>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Property_type" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		<xs:element name="Version_id" type="xs:string" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Property_relationship" type="Property_relationship" nillable="true" />
+	 <xs:complexType name="Property_relationship">
+		<xs:sequence>
+		<xs:element name="Description"  minOccurs="0" maxOccurs="1">
+			<xs:complexType>
+				<xs:choice>
+					<xs:element ref="Default_language_string"/>
+					<xs:element ref="Multi_language_string"/>
+				</xs:choice>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Related"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Property" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Relating"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Property" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Relation_type" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Property_value" type="Property_value" nillable="true" />
+	 <xs:complexType name="Property_value">
+		<xs:sequence>
+		<xs:element name="Value_name" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Property_value_association" type="Property_value_association" nillable="true" />
+	 <xs:complexType name="Property_value_association">
+		<xs:sequence>
+		<xs:element name="Definitional" type="xs:boolean" minOccurs="0" maxOccurs="1"/>
+		<xs:element name="Described_element"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:choice>
+					<xs:element ref="Item_definition"/>
+					<xs:element ref="Coupling"/>
+					<xs:element ref="Workpiece_feature"/>
+					<xs:element ref="Material_designation"/>
+					<xs:element ref="Cutting_data_association"/>
+					<xs:element ref="Grade"/>
+					<xs:element ref="Document_file"/>
+					<xs:element ref="Document_representation"/>
+					<xs:element ref="Item_structure_association"/>
+					<xs:element ref="Item_instance"/>
+					<xs:element ref="Mated_item_relationship"/>
+					<xs:element ref="Physical_item_structure_association"/>
+				</xs:choice>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Describing_property_value"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Property_value_representation" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Description"  minOccurs="0" maxOccurs="1">
+			<xs:complexType>
+				<xs:choice>
+					<xs:element ref="Default_language_string"/>
+					<xs:element ref="Multi_language_string"/>
+				</xs:choice>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Validity_context"  minOccurs="0" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Organization" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Property_value_representation" type="Property_value_representation" nillable="true" />
+	 <xs:complexType name="Property_value_representation">
+		<xs:sequence>
+		<xs:element name="Definition"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Property" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Global_unit"  minOccurs="0" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Unit" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Qualifier" type="xs:string" minOccurs="0" maxOccurs="1"/>
+		<xs:element name="Specified_value"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Property_value" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Value_determination" type="xs:string" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Property_value_representation_relationship" type="Property_value_representation_relationship" nillable="true" />
+	 <xs:complexType name="Property_value_representation_relationship">
+		<xs:sequence>
+		<xs:element name="Description"  minOccurs="0" maxOccurs="1">
+			<xs:complexType>
+				<xs:choice>
+					<xs:element ref="Default_language_string"/>
+					<xs:element ref="Multi_language_string"/>
+				</xs:choice>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Related"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Property_value_representation" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Relating"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Property_value_representation" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Relation_type" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Quantified_instance" type="Quantified_instance" nillable="true" />
+	 <xs:complexType name="Quantified_instance">
+		<xs:complexContent>
+		<xs:extension base="Item_instance">
+			<xs:sequence>
+			<xs:element name="Quantity"  minOccurs="1" maxOccurs="1">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element ref="Numerical_value" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			</xs:sequence>
+		</xs:extension>
+		</xs:complexContent>
+	 </xs:complexType>
+
+	 <xs:element name="Realized_item_association" type="Realized_item_association" nillable="true" />
+	 <xs:complexType name="Realized_item_association">
+		<xs:sequence>
+		<xs:element name="Physical_item"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Physical_item" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Realized_item_version"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Item_version" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Rectangular_size" type="Rectangular_size" nillable="true" />
+	 <xs:complexType name="Rectangular_size">
+		<xs:sequence>
+		<xs:element name="Density"  minOccurs="0" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Value_with_unit" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Height"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Value_with_unit" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Width"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Value_with_unit" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Specific_item_classification" type="Specific_item_classification" nillable="true" />
+	 <xs:complexType name="Specific_item_classification">
+		<xs:sequence>
+		<xs:element name="Associated_item" >
+			<xs:complexType>
+				<xs:choice maxOccurs="unbounded">
+				<xs:element ref="Item"/>
+				<xs:element ref="Physical_item"/>
+				</xs:choice>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Classification_name" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		<xs:element name="Description"  minOccurs="0" maxOccurs="1">
+			<xs:complexType>
+				<xs:choice>
+					<xs:element ref="Default_language_string"/>
+					<xs:element ref="Multi_language_string"/>
+				</xs:choice>
+			</xs:complexType>
+		</xs:element>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Specific_item_classification_hierarchy" type="Specific_item_classification_hierarchy" nillable="true" />
+	 <xs:complexType name="Specific_item_classification_hierarchy">
+		<xs:sequence>
+		<xs:element name="Sub_classification"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Specific_item_classification" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Super_classification"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Specific_item_classification" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="State" type="State" nillable="true" />
+	 <xs:complexType name="State">
+		<xs:sequence>
+		<xs:element name="Name" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="String_value" type="String_value" nillable="true" />
+	 <xs:complexType name="String_value">
+		<xs:complexContent>
+		<xs:extension base="Property_value">
+			<xs:sequence>
+			<xs:element name="Value_specification"  minOccurs="1" maxOccurs="1">
+				<xs:complexType>
+					<xs:choice>
+						<xs:element ref="Default_language_string"/>
+						<xs:element ref="Multi_language_string"/>
+					</xs:choice>
+				</xs:complexType>
+			</xs:element>
+			</xs:sequence>
+		</xs:extension>
+		</xs:complexContent>
+	 </xs:complexType>
+
+	 <xs:element name="String_with_language" type="String_with_language" nillable="true" />
+	 <xs:complexType name="String_with_language">
+		<xs:sequence>
+		<xs:element name="Contents" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		<xs:element name="Language_specification"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Language" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Substrate" type="Substrate" nillable="true" />
+	 <xs:complexType name="Substrate">
+		<xs:sequence>
+		<xs:element name="Name" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Transformation" type="Transformation" nillable="true" />
+	 <xs:complexType name="Transformation">
+		<xs:sequence>
+		<xs:element name="Axis_1"  minOccurs="0" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Direction" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Axis_2"  minOccurs="0" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Direction" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Local_origin"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Cartesian_point" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Transformation_2d" type="Transformation_2d" nillable="true" />
+	 <xs:complexType name="Transformation_2d">
+		<xs:complexContent>
+		<xs:extension base="Transformation">
+		</xs:extension>
+		</xs:complexContent>
+	 </xs:complexType>
+
+	 <xs:element name="Transformation_3d" type="Transformation_3d" nillable="true" />
+	 <xs:complexType name="Transformation_3d">
+		<xs:complexContent>
+		<xs:extension base="Transformation">
+			<xs:sequence>
+			<xs:element name="Axis_3"  minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element ref="Direction" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			</xs:sequence>
+		</xs:extension>
+		</xs:complexContent>
+	 </xs:complexType>
+
+	 <xs:element name="Unit" type="Unit" nillable="true" />
+	 <xs:complexType name="Unit">
+		<xs:sequence>
+		<xs:element name="Unit_name" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Value_limit" type="Value_limit" nillable="true" />
+	 <xs:complexType name="Value_limit">
+		<xs:complexContent>
+		<xs:extension base="Value_with_unit">
+			<xs:sequence>
+			<xs:element name="Limit" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="Limit_qualifier" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			</xs:sequence>
+		</xs:extension>
+		</xs:complexContent>
+	 </xs:complexType>
+
+	 <xs:element name="Value_limitation" type="Value_limitation" nillable="true" />
+	 <xs:complexType name="Value_limitation">
+		<xs:sequence>
+		<xs:element name="Envelope" type="xs:boolean" minOccurs="0" maxOccurs="1"/>
+		<xs:element name="Is_defined_by"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:choice>
+					<xs:element ref="Limits_and_fits"/>
+					<xs:element ref="Plus_minus_bounds"/>
+					<xs:element ref="Fitting_bounds"/>
+				</xs:choice>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Limited_value"  minOccurs="1" maxOccurs="1">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element ref="Numerical_value" minOccurs="0" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	 <xs:element name="Value_list" type="Value_list" nillable="true" />
+	 <xs:complexType name="Value_list">
+		<xs:complexContent>
+		<xs:extension base="Property_value">
+			<xs:sequence>
+			<xs:element name="Values" >
+				<xs:complexType>
+					<xs:choice maxOccurs="unbounded">
+					<xs:element ref="Property_value"/>
+					<xs:element ref="Value_with_unit"/>
+					<xs:element ref="String_value"/>
+					<xs:element ref="Value_list"/>
+					</xs:choice>
+				</xs:complexType>
+			</xs:element>
+			</xs:sequence>
+		</xs:extension>
+		</xs:complexContent>
+	 </xs:complexType>
+
+	 <xs:element name="Value_range" type="Value_range" nillable="true" />
+	 <xs:complexType name="Value_range">
+		<xs:complexContent>
+		<xs:extension base="Value_with_unit">
+			<xs:sequence>
+			<xs:element name="Lower_limit" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="Upper_limit" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			</xs:sequence>
+		</xs:extension>
+		</xs:complexContent>
+	 </xs:complexType>
+
+	 <xs:element name="Value_with_unit" type="Value_with_unit" nillable="true" />
+	 <xs:complexType name="Value_with_unit">
+		<xs:complexContent>
+		<xs:extension base="Property_value">
+			<xs:sequence>
+			<xs:element name="Significant_digits" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="Unit_component"  minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element ref="Unit" minOccurs="0" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			</xs:sequence>
+		</xs:extension>
+		</xs:complexContent>
+	 </xs:complexType>
+
+	 <xs:element name="Workpiece_feature" type="Workpiece_feature" nillable="true" />
+	 <xs:complexType name="Workpiece_feature">
+		<xs:sequence>
+		<xs:element name="Description"  minOccurs="0" maxOccurs="1">
+			<xs:complexType>
+				<xs:choice>
+					<xs:element ref="Default_language_string"/>
+					<xs:element ref="Multi_language_string"/>
+				</xs:choice>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="Id" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		<xs:element name="Representation" >
+			<xs:complexType>
+				<xs:choice maxOccurs="unbounded">
+				<xs:element ref="External_model"/>
+				<xs:element ref="External_picture"/>
+				<xs:element ref="External_geometric_model"/>
+				</xs:choice>
+			</xs:complexType>
+		</xs:element>
+		</xs:sequence>
+		<xs:attribute ref='id'/>
+		<xs:attribute ref='ref'/>
+	 </xs:complexType>
+
+	<xs:element name="Default_language_string">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+			</xs:restriction>
+		</xs:simpleType>
+
+	</xs:element>
+	<xs:element name="uos" >
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Alias_identification" maxOccurs="unbounded"/>
+				<xs:element ref="Application_context" maxOccurs="unbounded"/>
+				<xs:element ref="Assembly_association" maxOccurs="unbounded"/>
+				<xs:element ref="Assembly_definition" maxOccurs="unbounded"/>
+				<xs:element ref="Cartesian_coordinate_space" maxOccurs="unbounded"/>
+				<xs:element ref="Cartesian_coordinate_space_2d" maxOccurs="unbounded"/>
+				<xs:element ref="Cartesian_coordinate_space_3d" maxOccurs="unbounded"/>
+				<xs:element ref="Cartesian_point" maxOccurs="unbounded"/>
+				<xs:element ref="Classification_association" maxOccurs="unbounded"/>
+				<xs:element ref="Classification_association_relationship" maxOccurs="unbounded"/>
+				<xs:element ref="Classification_attribute" maxOccurs="unbounded"/>
+				<xs:element ref="Classification_system" maxOccurs="unbounded"/>
+				<xs:element ref="Coating" maxOccurs="unbounded"/>
+				<xs:element ref="Coupling" maxOccurs="unbounded"/>
+				<xs:element ref="Cutting_condition" maxOccurs="unbounded"/>
+				<xs:element ref="Cutting_data_association" maxOccurs="unbounded"/>
+				<xs:element ref="Date_time" maxOccurs="unbounded"/>
+				<xs:element ref="Default_language_string" maxOccurs="unbounded"/>
+				<xs:element ref="Digital_document" maxOccurs="unbounded"/>
+				<xs:element ref="Digital_file" maxOccurs="unbounded"/>
+				<xs:element ref="Din4000_reference" maxOccurs="unbounded"/>
+				<xs:element ref="Direction" maxOccurs="unbounded"/>
+				<xs:element ref="Document" maxOccurs="unbounded"/>
+				<xs:element ref="Document_assignment" maxOccurs="unbounded"/>
+				<xs:element ref="Document_content_property" maxOccurs="unbounded"/>
+				<xs:element ref="Document_creation_property" maxOccurs="unbounded"/>
+				<xs:element ref="Document_file" maxOccurs="unbounded"/>
+				<xs:element ref="Document_format_property" maxOccurs="unbounded"/>
+				<xs:element ref="Document_location_property" maxOccurs="unbounded"/>
+				<xs:element ref="Document_representation" maxOccurs="unbounded"/>
+				<xs:element ref="Document_size_property" maxOccurs="unbounded"/>
+				<xs:element ref="Document_type_property" maxOccurs="unbounded"/>
+				<xs:element ref="Document_version" maxOccurs="unbounded"/>
+				<xs:element ref="Document_version_relationship" maxOccurs="unbounded"/>
+				<xs:element ref="Duration" maxOccurs="unbounded"/>
+				<xs:element ref="Effectivity" maxOccurs="unbounded"/>
+				<xs:element ref="Effectivity_assignment" maxOccurs="unbounded"/>
+				<xs:element ref="Effectivity_relationship" maxOccurs="unbounded"/>
+				<xs:element ref="External_file_id_and_location" maxOccurs="unbounded"/>
+				<xs:element ref="External_geometric_model" maxOccurs="unbounded"/>
+				<xs:element ref="External_library_reference" maxOccurs="unbounded"/>
+				<xs:element ref="External_model" maxOccurs="unbounded"/>
+				<xs:element ref="External_picture" maxOccurs="unbounded"/>
+				<xs:element ref="Fitting_bounds" maxOccurs="unbounded"/>
+				<xs:element ref="General_classification" maxOccurs="unbounded"/>
+				<xs:element ref="General_classification_hierarchy" maxOccurs="unbounded"/>
+				<xs:element ref="Geometric_model_relationship_with_transformation" maxOccurs="unbounded"/>
+				<xs:element ref="Grade" maxOccurs="unbounded"/>
+				<xs:element ref="Grade_relationship" maxOccurs="unbounded"/>
+				<xs:element ref="Item" maxOccurs="unbounded"/>
+				<xs:element ref="Item_characteristic_association" maxOccurs="unbounded"/>
+				<xs:element ref="Item_definition" maxOccurs="unbounded"/>
+				<xs:element ref="Item_definition_relationship" maxOccurs="unbounded"/>
+				<xs:element ref="Item_instance" maxOccurs="unbounded"/>
+				<xs:element ref="Item_structure_association" maxOccurs="unbounded"/>
+				<xs:element ref="Item_version" maxOccurs="unbounded"/>
+				<xs:element ref="Item_version_relationship" maxOccurs="unbounded"/>
+				<xs:element ref="Language" maxOccurs="unbounded"/>
+				<xs:element ref="Limits_and_fits" maxOccurs="unbounded"/>
+				<xs:element ref="Location" maxOccurs="unbounded"/>
+				<xs:element ref="Mated_item_relationship" maxOccurs="unbounded"/>
+				<xs:element ref="Material_designation" maxOccurs="unbounded"/>
+				<xs:element ref="Mating_association" maxOccurs="unbounded"/>
+				<xs:element ref="Mating_definition" maxOccurs="unbounded"/>
+				<xs:element ref="Multi_language_string" maxOccurs="unbounded"/>
+				<xs:element ref="Named_size" maxOccurs="unbounded"/>
+				<xs:element ref="Numerical_value" maxOccurs="unbounded"/>
+				<xs:element ref="Organization" maxOccurs="unbounded"/>
+				<xs:element ref="Person" maxOccurs="unbounded"/>
+				<xs:element ref="Person_in_organization" maxOccurs="unbounded"/>
+				<xs:element ref="Person_organization_assignment" maxOccurs="unbounded"/>
+				<xs:element ref="Physical_document" maxOccurs="unbounded"/>
+				<xs:element ref="Physical_file" maxOccurs="unbounded"/>
+				<xs:element ref="Physical_item" maxOccurs="unbounded"/>
+				<xs:element ref="Physical_item_definition" maxOccurs="unbounded"/>
+				<xs:element ref="Physical_item_location_association" maxOccurs="unbounded"/>
+				<xs:element ref="Physical_item_state_association" maxOccurs="unbounded"/>
+				<xs:element ref="Physical_item_structure_association" maxOccurs="unbounded"/>
+				<xs:element ref="Physical_item_version" maxOccurs="unbounded"/>
+				<xs:element ref="Plib_class_reference" maxOccurs="unbounded"/>
+				<xs:element ref="Plib_property_reference" maxOccurs="unbounded"/>
+				<xs:element ref="Plus_minus_bounds" maxOccurs="unbounded"/>
+				<xs:element ref="Property" maxOccurs="unbounded"/>
+				<xs:element ref="Property_relationship" maxOccurs="unbounded"/>
+				<xs:element ref="Property_value" maxOccurs="unbounded"/>
+				<xs:element ref="Property_value_association" maxOccurs="unbounded"/>
+				<xs:element ref="Property_value_representation" maxOccurs="unbounded"/>
+				<xs:element ref="Property_value_representation_relationship" maxOccurs="unbounded"/>
+				<xs:element ref="Quantified_instance" maxOccurs="unbounded"/>
+				<xs:element ref="Realized_item_association" maxOccurs="unbounded"/>
+				<xs:element ref="Rectangular_size" maxOccurs="unbounded"/>
+				<xs:element ref="Specific_item_classification" maxOccurs="unbounded"/>
+				<xs:element ref="Specific_item_classification_hierarchy" maxOccurs="unbounded"/>
+				<xs:element ref="State" maxOccurs="unbounded"/>
+				<xs:element ref="String_value" maxOccurs="unbounded"/>
+				<xs:element ref="String_with_language" maxOccurs="unbounded"/>
+				<xs:element ref="Substrate" maxOccurs="unbounded"/>
+				<xs:element ref="Transformation" maxOccurs="unbounded"/>
+				<xs:element ref="Transformation_2d" maxOccurs="unbounded"/>
+				<xs:element ref="Transformation_3d" maxOccurs="unbounded"/>
+				<xs:element ref="Unit" maxOccurs="unbounded"/>
+				<xs:element ref="Value_limit" maxOccurs="unbounded"/>
+				<xs:element ref="Value_limitation" maxOccurs="unbounded"/>
+				<xs:element ref="Value_list" maxOccurs="unbounded"/>
+				<xs:element ref="Value_range" maxOccurs="unbounded"/>
+				<xs:element ref="Value_with_unit" maxOccurs="unbounded"/>
+				<xs:element ref="Workpiece_feature" maxOccurs="unbounded"/>
+				<xs:element ref="exp:header" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

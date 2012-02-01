@@ -1,0 +1,76 @@
+﻿ 
+
+
+
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("xsd", "2.0.50727.3038")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
+    public partial class item_characteristic_associationAssociated_characteristic
+    {
+
+        private object itemField;
+
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("coupling", typeof(coupling))]
+        [System.Xml.Serialization.XmlElementAttribute("cutting_condition", typeof(cutting_condition))]
+        [System.Xml.Serialization.XmlElementAttribute("cutting_data_association", typeof(cutting_data_association))]
+        [System.Xml.Serialization.XmlElementAttribute("grade", typeof(grade))]
+        [System.Xml.Serialization.XmlElementAttribute("material_designation", typeof(material_designation))]
+        [System.Xml.Serialization.XmlElementAttribute("workpiece_feature", typeof(workpiece_feature))]
+        public object Item
+        {
+            get
+            {
+                return this.itemField;
+            }
+            set
+            {
+                this.itemField = value;
+            }
+        }
+    }
+
+ <Item_characteristic_association id="id-4">
+	<Associated_characteristic>
+		<grade xsi:nil="true" ref="id-5"/>
+	</Associated_characteristic>
+	<Associated_item>
+		<item_definition xsi:nil="true" ref="id-6"/>
+	</Associated_item>
+	<Relation_type>has characteristic</Relation_type>
+</Item_characteristic_association>
+<Grade id="id-5">
+	<Coating>
+		<coating xsi:nil="true" ref="id-168"/>
+	</Coating>
+	<Cutting_condition>
+		<cutting_condition xsi:nil="true" ref="id-169"/>
+	</Cutting_condition>
+	<Identifier>1025 GC</Identifier>
+	<Standard_designation>HC</Standard_designation>
+	<Substrate>
+		<substrate xsi:nil="true" ref="id-170"/>
+	</Substrate>
+	<Workpiece_material>
+		<material_designation xsi:nil="true" ref="id-171"/>
+	</Workpiece_material>
+</Grade>
+<Coating id="id-168">
+	<Coating_name>TiAlN</Coating_name>
+	<Coating_process>PVD</Coating_process>
+</Coating>
+<Cutting_condition id="id-169">
+	<Condition_name>P25</Condition_name>
+</Cutting_condition>
+
+<Substrate id="id-170">
+	<Name>WC</Name>
+</Substrate>
+
+<Material_designation id="id-171">
+	<Material_name>P</Material_name>
+</Material_designation>
+

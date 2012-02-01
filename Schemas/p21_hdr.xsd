@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="ExpressHeader"
+xmlns:exp="ExpressHeader">
+	<xs:element name="file_description" type="exp:file_description"/>
+	<xs:complexType name="file_description">
+		<xs:sequence>
+			<xs:element name="description" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="implementation_level" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="file_name" type="exp:file_name"/>
+	<xs:complexType name="file_name">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="time_stamp" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="author" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="organization" type="xs:string" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="preprocessor_Version" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="originating_system" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="authorisation" type="xs:string" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="file_schema" type="exp:file_schema"/>
+	<xs:complexType name="file_schema">
+		<xs:sequence>
+			<xs:element name="schema_identifiers">
+				<xs:complexType>
+					<xs:choice maxOccurs="unbounded">
+						<xs:element ref="exp:schema_name"/>
+					</xs:choice>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="schema_name">
+		<xs:simpleType>
+			<xs:restriction base="xs:string"/>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="header">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="exp:file_description" maxOccurs="unbounded"/>
+				<xs:element ref="exp:file_name" maxOccurs="unbounded"/>
+				<xs:element ref="exp:file_schema" maxOccurs="unbounded"/>
+				<xs:element ref="exp:schema_name" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

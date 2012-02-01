@@ -1,0 +1,725 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="9.00"
+	Name="cutting_tool_schema_arm"
+	ProjectGUID="{94A7CBEC-93F8-5C4C-AC5F-AC90EDB6801A}"
+	RootNamespace="cutting_tool_schema_arm"
+	Keyword="Win32Proj"
+	TargetFrameworkVersion="131072"
+	>
+	<Platforms>
+		<Platform
+			Name="Win32"
+		/>
+		<Platform
+			Name="x64"
+		/>
+	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
+	<Configurations>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory="Debug"
+			IntermediateDirectory="Debug"
+			ConfigurationType="4"
+			UseOfMFC="0"
+			>
+			<Tool
+				Name="VCCLCompilerTool"
+				Optimization="0"
+				AdditionalOptions="/Zm128"
+				AdditionalIncludeDirectories="..\Altova,..\AltovaXML"
+				PreprocessorDefinitions="WIN32;_DEBUG;cutting_tool_schema_arm_EXPORTS;_LIB;_CRT_SECURE_NO_DEPRECATE"
+				StringPooling="true"
+				MinimalRebuild="true"
+				BasicRuntimeChecks="3"
+				RuntimeLibrary="1"
+				UsePrecompiledHeader="2"
+				WarningLevel="3"
+				Detect64BitPortabilityProblems="false"
+				DebugInformationFormat="4"
+			/>
+			<Tool
+				Name="VCLibrarianTool"
+				OutputFile="..\cutting_tool_schema_armTest\Debug\cutting_tool_schema_arm.lib"
+				SuppressStartupBanner="true"
+			/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="_DEBUG"
+				Culture="1033"
+			/> 
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="Release"
+			IntermediateDirectory="Release"
+			ConfigurationType="4"
+			UseOfMFC="0"
+			WholeProgramOptimization="1"
+			>
+			<Tool
+				Name="VCCLCompilerTool"
+				AdditionalIncludeDirectories="..\Altova,..\AltovaXML"
+				PreprocessorDefinitions="WIN32;NDEBUG;cutting_tool_schema_arm_EXPORTS;_LIB;_CRT_SECURE_NO_DEPRECATE"
+				StringPooling="true"
+				RuntimeLibrary="0"
+				UsePrecompiledHeader="2"
+				WarningLevel="3"
+				Detect64BitPortabilityProblems="false"
+				DebugInformationFormat="3"
+			/>
+			<Tool
+				Name="VCLibrarianTool"
+				OutputFile="..\cutting_tool_schema_armTest\Release\cutting_tool_schema_arm.lib"
+				SuppressStartupBanner="true"
+			/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="NDEBUG"
+				Culture="1033"
+			/> 
+		</Configuration>
+		<Configuration
+			Name="Unicode Debug|Win32"
+			OutputDirectory="UnicodeDebug"
+			IntermediateDirectory="UnicodeDebug"
+			ConfigurationType="4"
+			UseOfMFC="0"
+			CharacterSet="1"
+			>
+			<Tool
+				Name="VCCLCompilerTool"
+				Optimization="0"
+				AdditionalOptions="/Zm128"
+				AdditionalIncludeDirectories="..\Altova,..\AltovaXML"
+				PreprocessorDefinitions="WIN32;_DEBUG;cutting_tool_schema_arm_EXPORTS;_LIB;_CRT_SECURE_NO_DEPRECATE"
+				StringPooling="true"
+				MinimalRebuild="true"
+				BasicRuntimeChecks="3"
+				RuntimeLibrary="1"
+				UsePrecompiledHeader="2"
+				WarningLevel="3"
+				Detect64BitPortabilityProblems="false"
+				DebugInformationFormat="4"
+			/>
+			<Tool
+				Name="VCLibrarianTool"
+				OutputFile="..\cutting_tool_schema_armTest\UnicodeDebug\cutting_tool_schema_arm.lib"
+				SuppressStartupBanner="true"
+			/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="_DEBUG"
+				Culture="1033"
+			/> 
+		</Configuration>
+		<Configuration
+			Name="Unicode Release|Win32"
+			OutputDirectory="UnicodeRelease"
+			IntermediateDirectory="UnicodeRelease"
+			ConfigurationType="4"
+			UseOfMFC="0"
+			CharacterSet="1"
+			WholeProgramOptimization="1"
+			>
+			<Tool
+				Name="VCCLCompilerTool"
+				AdditionalIncludeDirectories="..\Altova,..\AltovaXML"
+				PreprocessorDefinitions="WIN32;NDEBUG;cutting_tool_schema_arm_EXPORTS;_LIB;_CRT_SECURE_NO_DEPRECATE"
+				StringPooling="true"
+				RuntimeLibrary="0"
+				UsePrecompiledHeader="2"
+				WarningLevel="3"
+				Detect64BitPortabilityProblems="false"
+				DebugInformationFormat="3"
+			/>
+			<Tool
+				Name="VCLibrarianTool"
+				OutputFile="..\cutting_tool_schema_armTest\UnicodeRelease\cutting_tool_schema_arm.lib"
+				SuppressStartupBanner="true"
+			/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="NDEBUG"
+				Culture="1033"
+			/> 
+		</Configuration>
+		<Configuration
+			Name="Debug|x64"
+			OutputDirectory="x64\Debug"
+			IntermediateDirectory="x64\Debug"
+			ConfigurationType="4"
+			UseOfMFC="0"
+			>
+			<Tool
+				Name="VCCLCompilerTool"
+				Optimization="0"
+				AdditionalOptions="/Zm128"
+				AdditionalIncludeDirectories="..\Altova,..\AltovaXML"
+				PreprocessorDefinitions="WIN32;_DEBUG;cutting_tool_schema_arm_EXPORTS;_LIB;_CRT_SECURE_NO_DEPRECATE"
+				StringPooling="true"
+				MinimalRebuild="true"
+				BasicRuntimeChecks="3"
+				RuntimeLibrary="1"
+				UsePrecompiledHeader="2"
+				WarningLevel="3"
+				Detect64BitPortabilityProblems="false"
+				DebugInformationFormat="3"
+			/>
+			<Tool
+				Name="VCLibrarianTool"
+				OutputFile="..\cutting_tool_schema_armTest\x64\Debug\cutting_tool_schema_arm.lib"
+				SuppressStartupBanner="true"
+			/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="_DEBUG"
+				Culture="1033"
+			/> 
+		</Configuration>
+		<Configuration
+			Name="Release|x64"
+			OutputDirectory="x64\Release"
+			IntermediateDirectory="x64\Release"
+			ConfigurationType="4"
+			UseOfMFC="0"
+			WholeProgramOptimization="1"
+			>
+			<Tool
+				Name="VCCLCompilerTool"
+				AdditionalIncludeDirectories="..\Altova,..\AltovaXML"
+				PreprocessorDefinitions="WIN32;NDEBUG;cutting_tool_schema_arm_EXPORTS;_LIB;_CRT_SECURE_NO_DEPRECATE"
+				StringPooling="true"
+				RuntimeLibrary="0"
+				UsePrecompiledHeader="2"
+				WarningLevel="3"
+				Detect64BitPortabilityProblems="false"
+				DebugInformationFormat="3"
+			/>
+			<Tool
+				Name="VCLibrarianTool"
+				OutputFile="..\cutting_tool_schema_armTest\x64\Release\cutting_tool_schema_arm.lib"
+				SuppressStartupBanner="true"
+			/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="NDEBUG"
+				Culture="1033"
+			/> 
+		</Configuration>
+		<Configuration
+			Name="Unicode Debug|x64"
+			OutputDirectory="x64\UnicodeDebug"
+			IntermediateDirectory="x64\UnicodeDebug"
+			ConfigurationType="4"
+			UseOfMFC="0"
+			CharacterSet="1"
+			>
+			<Tool
+				Name="VCCLCompilerTool"
+				Optimization="0"
+				AdditionalOptions="/Zm128"
+				AdditionalIncludeDirectories="..\Altova,..\AltovaXML"
+				PreprocessorDefinitions="WIN32;_DEBUG;cutting_tool_schema_arm_EXPORTS;_LIB;_CRT_SECURE_NO_DEPRECATE"
+				StringPooling="true"
+				MinimalRebuild="true"
+				BasicRuntimeChecks="3"
+				RuntimeLibrary="1"
+				UsePrecompiledHeader="2"
+				WarningLevel="3"
+				Detect64BitPortabilityProblems="false"
+				DebugInformationFormat="3"
+			/>
+			<Tool
+				Name="VCLibrarianTool"
+				OutputFile="..\cutting_tool_schema_armTest\x64\UnicodeDebug\cutting_tool_schema_arm.lib"
+				SuppressStartupBanner="true"
+			/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="_DEBUG"
+				Culture="1033"
+			/> 
+		</Configuration>
+		<Configuration
+			Name="Unicode Release|x64"
+			OutputDirectory="x64\UnicodeRelease"
+			IntermediateDirectory="x64\UnicodeRelease"
+			ConfigurationType="4"
+			UseOfMFC="0"
+			CharacterSet="1"
+			WholeProgramOptimization="1"
+			>
+			<Tool
+				Name="VCCLCompilerTool"
+				AdditionalIncludeDirectories="..\Altova,..\AltovaXML"
+				PreprocessorDefinitions="WIN32;NDEBUG;cutting_tool_schema_arm_EXPORTS;_LIB;_CRT_SECURE_NO_DEPRECATE"
+				StringPooling="true"
+				RuntimeLibrary="0"
+				UsePrecompiledHeader="2"
+				WarningLevel="3"
+				Detect64BitPortabilityProblems="false"
+				DebugInformationFormat="3"
+			/>
+			<Tool
+				Name="VCLibrarianTool"
+				OutputFile="..\cutting_tool_schema_armTest\x64\UnicodeRelease\cutting_tool_schema_arm.lib"
+				SuppressStartupBanner="true"
+			/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="NDEBUG"
+				Culture="1033"
+			/> 
+		</Configuration>
+	</Configurations>
+	<References>
+		<ProjectReference
+			ReferencedProjectIdentifier="{5CCDF85F-DC01-43BF-A2C2-ACB1BD6BEA42}"
+			RelativePathToProject="..\Altova\Altova.vcproj"
+		/>
+		<ProjectReference
+			ReferencedProjectIdentifier="{3E4146D4-2603-4873-B8AE-4B83B18ABE9F}"
+			RelativePathToProject="..\AltovaXML\AltovaXML.vcproj"
+		/>
+	</References>
+	<Files>
+		<Filter
+			Name="Header Files"
+			Filter="h;hpp;hxx;hm;inl;inc;xsd"
+			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
+			>
+			<File RelativePath=".\cutting_tool_schema_arm-typeinfo.h"/>
+			<File
+				RelativePath=".\cutting_tool_schema_arm.h"
+				>
+			</File>
+			<File
+				RelativePath=".\StdAfx.h"
+				>
+			</File>
+			<Filter
+				Name="Type Headers"
+				UniqueIdentifier="{3796A162-933F-419b-B768-69948FDFDBA6}"
+			>
+				<File RelativePath=".\type_.CAlias_identification.h"/>
+				<File RelativePath=".\type_.CApplication_context.h"/>
+				<File RelativePath=".\type_.CAssembly_association.h"/>
+				<File RelativePath=".\type_.CAssembly_definition.h"/>
+				<File RelativePath=".\type_.CCartesian_coordinate_space.h"/>
+				<File RelativePath=".\type_.CCartesian_coordinate_space_2d.h"/>
+				<File RelativePath=".\type_.CCartesian_coordinate_space_3d.h"/>
+				<File RelativePath=".\type_.CCartesian_point.h"/>
+				<File RelativePath=".\type_.CClassification_association.h"/>
+				<File RelativePath=".\type_.CClassification_association_relationship.h"/>
+				<File RelativePath=".\type_.CClassification_attribute.h"/>
+				<File RelativePath=".\type_.CClassification_system.h"/>
+				<File RelativePath=".\type_.CCoating.h"/>
+				<File RelativePath=".\type_.CCoupling.h"/>
+				<File RelativePath=".\type_.CCutting_condition.h"/>
+				<File RelativePath=".\type_.CCutting_data_association.h"/>
+				<File RelativePath=".\type_.CDate_time.h"/>
+				<File RelativePath=".\type_.CDigital_document.h"/>
+				<File RelativePath=".\type_.CDigital_file.h"/>
+				<File RelativePath=".\type_.CDin4000_reference.h"/>
+				<File RelativePath=".\type_.CDirection.h"/>
+				<File RelativePath=".\type_.CDocument.h"/>
+				<File RelativePath=".\type_.CDocument_assignment.h"/>
+				<File RelativePath=".\type_.CDocument_content_property.h"/>
+				<File RelativePath=".\type_.CDocument_creation_property.h"/>
+				<File RelativePath=".\type_.CDocument_file.h"/>
+				<File RelativePath=".\type_.CDocument_format_property.h"/>
+				<File RelativePath=".\type_.CDocument_location_property.h"/>
+				<File RelativePath=".\type_.CDocument_representation.h"/>
+				<File RelativePath=".\type_.CDocument_size_property.h"/>
+				<File RelativePath=".\type_.CDocument_type_property.h"/>
+				<File RelativePath=".\type_.CDocument_version.h"/>
+				<File RelativePath=".\type_.CDocument_version_relationship.h"/>
+				<File RelativePath=".\type_.CDuration.h"/>
+				<File RelativePath=".\type_.CEffectivity.h"/>
+				<File RelativePath=".\type_.CEffectivity_assignment.h"/>
+				<File RelativePath=".\type_.CEffectivity_relationship.h"/>
+				<File RelativePath=".\type_.CExternal_file_id_and_location.h"/>
+				<File RelativePath=".\type_.CExternal_geometric_model.h"/>
+				<File RelativePath=".\type_.CExternal_library_reference.h"/>
+				<File RelativePath=".\type_.CExternal_model.h"/>
+				<File RelativePath=".\type_.CExternal_picture.h"/>
+				<File RelativePath=".\type_.CFitting_bounds.h"/>
+				<File RelativePath=".\type_.CGeneral_classification.h"/>
+				<File RelativePath=".\type_.CGeneral_classification_hierarchy.h"/>
+				<File RelativePath=".\type_.CGeometric_model_relationship_with_transformation.h"/>
+				<File RelativePath=".\type_.CGrade.h"/>
+				<File RelativePath=".\type_.CGrade_relationship.h"/>
+				<File RelativePath=".\type_.CItem.h"/>
+				<File RelativePath=".\type_.CItem_characteristic_association.h"/>
+				<File RelativePath=".\type_.CItem_definition.h"/>
+				<File RelativePath=".\type_.CItem_definition_relationship.h"/>
+				<File RelativePath=".\type_.CItem_instance.h"/>
+				<File RelativePath=".\type_.CItem_structure_association.h"/>
+				<File RelativePath=".\type_.CItem_version.h"/>
+				<File RelativePath=".\type_.CItem_version_relationship.h"/>
+				<File RelativePath=".\type_.CLanguage.h"/>
+				<File RelativePath=".\type_.CLimits_and_fits.h"/>
+				<File RelativePath=".\type_.CLocation.h"/>
+				<File RelativePath=".\type_.CMated_item_relationship.h"/>
+				<File RelativePath=".\type_.CMaterial_designation.h"/>
+				<File RelativePath=".\type_.CMating_association.h"/>
+				<File RelativePath=".\type_.CMating_definition.h"/>
+				<File RelativePath=".\type_.CMulti_language_string.h"/>
+				<File RelativePath=".\type_.CNamed_size.h"/>
+				<File RelativePath=".\type_.CNumerical_value.h"/>
+				<File RelativePath=".\type_.COrganization.h"/>
+				<File RelativePath=".\type_.CPerson.h"/>
+				<File RelativePath=".\type_.CPerson_in_organization.h"/>
+				<File RelativePath=".\type_.CPerson_organization_assignment.h"/>
+				<File RelativePath=".\type_.CPhysical_document.h"/>
+				<File RelativePath=".\type_.CPhysical_file.h"/>
+				<File RelativePath=".\type_.CPhysical_item.h"/>
+				<File RelativePath=".\type_.CPhysical_item_definition.h"/>
+				<File RelativePath=".\type_.CPhysical_item_location_association.h"/>
+				<File RelativePath=".\type_.CPhysical_item_state_association.h"/>
+				<File RelativePath=".\type_.CPhysical_item_structure_association.h"/>
+				<File RelativePath=".\type_.CPhysical_item_version.h"/>
+				<File RelativePath=".\type_.CPlib_class_reference.h"/>
+				<File RelativePath=".\type_.CPlib_property_reference.h"/>
+				<File RelativePath=".\type_.CPlus_minus_bounds.h"/>
+				<File RelativePath=".\type_.CProperty.h"/>
+				<File RelativePath=".\type_.CProperty_relationship.h"/>
+				<File RelativePath=".\type_.CProperty_value.h"/>
+				<File RelativePath=".\type_.CProperty_value_association.h"/>
+				<File RelativePath=".\type_.CProperty_value_representation.h"/>
+				<File RelativePath=".\type_.CProperty_value_representation_relationship.h"/>
+				<File RelativePath=".\type_.CQuantified_instance.h"/>
+				<File RelativePath=".\type_.CRealized_item_association.h"/>
+				<File RelativePath=".\type_.CRectangular_size.h"/>
+				<File RelativePath=".\type_.CSpecific_item_classification.h"/>
+				<File RelativePath=".\type_.CSpecific_item_classification_hierarchy.h"/>
+				<File RelativePath=".\type_.CState.h"/>
+				<File RelativePath=".\type_.CString_value.h"/>
+				<File RelativePath=".\type_.CString_with_language.h"/>
+				<File RelativePath=".\type_.CSubstrate.h"/>
+				<File RelativePath=".\type_.CTransformation.h"/>
+				<File RelativePath=".\type_.CTransformation_2d.h"/>
+				<File RelativePath=".\type_.CTransformation_3d.h"/>
+				<File RelativePath=".\type_.CUnit.h"/>
+				<File RelativePath=".\type_.CValue_limit.h"/>
+				<File RelativePath=".\type_.CValue_limitation.h"/>
+				<File RelativePath=".\type_.CValue_list.h"/>
+				<File RelativePath=".\type_.CValue_range.h"/>
+				<File RelativePath=".\type_.CValue_with_unit.h"/>
+				<File RelativePath=".\type_.CWorkpiece_feature.h"/>
+				<File RelativePath=".\type_.Ccutting_tool_schema_arm.h"/>
+				<File RelativePath=".\type_.CDefault_language_stringType.h"/>
+				<File RelativePath=".\type_.CDefault_language_stringType2.h"/>
+				<File RelativePath=".\type_.CuosType.h"/>
+				<File RelativePath=".\type_.CheaderType.h"/>
+				<File RelativePath=".\type_.Cschema_nameType.h"/>
+				<File RelativePath=".\type_.Cschema_nameType2.h"/>
+				<File RelativePath=".\type_.CAlias_scopeType.h"/>
+				<File RelativePath=".\type_.CDescriptionType.h"/>
+				<File RelativePath=".\type_.CIs_applied_toType.h"/>
+				<File RelativePath=".\type_.CDescriptionType2.h"/>
+				<File RelativePath=".\type_.CPlacementType.h"/>
+				<File RelativePath=".\type_.CRelatedType.h"/>
+				<File RelativePath=".\type_.CRelatingType.h"/>
+				<File RelativePath=".\type_.CAssociated_item_versionType.h"/>
+				<File RelativePath=".\type_.CContextsType.h"/>
+				<File RelativePath=".\type_.CNameType.h"/>
+				<File RelativePath=".\type_.CUnit_of_valuesType.h"/>
+				<File RelativePath=".\type_.CCoordinatesType.h"/>
+				<File RelativePath=".\type_.CCoordinatesType2.h"/>
+				<File RelativePath=".\type_.CAssociated_classificationType.h"/>
+				<File RelativePath=".\type_.CClassified_elementType.h"/>
+				<File RelativePath=".\type_.CRelatedType2.h"/>
+				<File RelativePath=".\type_.CRelatingType2.h"/>
+				<File RelativePath=".\type_.CAllowed_valueType.h"/>
+				<File RelativePath=".\type_.CAssociated_classificationType2.h"/>
+				<File RelativePath=".\type_.CAttribute_definitionType.h"/>
+				<File RelativePath=".\type_.CDescriptionType3.h"/>
+				<File RelativePath=".\type_.CNameType2.h"/>
+				<File RelativePath=".\type_.CDescriptionType4.h"/>
+				<File RelativePath=".\type_.CPiecesType.h"/>
+				<File RelativePath=".\type_.CSizeType.h"/>
+				<File RelativePath=".\type_.CAssociated_materialType.h"/>
+				<File RelativePath=".\type_.CDepth_of_cutType.h"/>
+				<File RelativePath=".\type_.CFeedType.h"/>
+				<File RelativePath=".\type_.CSpeedType.h"/>
+				<File RelativePath=".\type_.CAssociated_document_versionType.h"/>
+				<File RelativePath=".\type_.CCommon_locationType.h"/>
+				<File RelativePath=".\type_.CContentType.h"/>
+				<File RelativePath=".\type_.CCreationType.h"/>
+				<File RelativePath=".\type_.CDescriptionType5.h"/>
+				<File RelativePath=".\type_.CRepresentation_formatType.h"/>
+				<File RelativePath=".\type_.CSizeType2.h"/>
+				<File RelativePath=".\type_.CFileType.h"/>
+				<File RelativePath=".\type_.CContentType2.h"/>
+				<File RelativePath=".\type_.CCreationType2.h"/>
+				<File RelativePath=".\type_.CDocument_file_typeType.h"/>
+				<File RelativePath=".\type_.CExternal_id_and_locationType.h"/>
+				<File RelativePath=".\type_.CFile_formatType.h"/>
+				<File RelativePath=".\type_.CSizeType3.h"/>
+				<File RelativePath=".\type_.CDescriptionType6.h"/>
+				<File RelativePath=".\type_.CDirection_ratiosType.h"/>
+				<File RelativePath=".\type_.CDirection_ratiosType2.h"/>
+				<File RelativePath=".\type_.CDescriptionType7.h"/>
+				<File RelativePath=".\type_.CNameType3.h"/>
+				<File RelativePath=".\type_.CAssigned_documentType.h"/>
+				<File RelativePath=".\type_.CIs_assigned_toType.h"/>
+				<File RelativePath=".\type_.CLanguagesType.h"/>
+				<File RelativePath=".\type_.CReal_world_scaleType.h"/>
+				<File RelativePath=".\type_.CSize_formatType.h"/>
+				<File RelativePath=".\type_.CFile_sizeType.h"/>
+				<File RelativePath=".\type_.CPage_countType.h"/>
+				<File RelativePath=".\type_.CUsed_classification_systemType.h"/>
+				<File RelativePath=".\type_.CAssociated_documentType.h"/>
+				<File RelativePath=".\type_.CDescriptionType8.h"/>
+				<File RelativePath=".\type_.CDescriptionType9.h"/>
+				<File RelativePath=".\type_.CRelatedType3.h"/>
+				<File RelativePath=".\type_.CRelatingType3.h"/>
+				<File RelativePath=".\type_.CConcerned_organizationType.h"/>
+				<File RelativePath=".\type_.CDescriptionType10.h"/>
+				<File RelativePath=".\type_.CEnd_definitionType.h"/>
+				<File RelativePath=".\type_.CPeriodType.h"/>
+				<File RelativePath=".\type_.CStart_definitionType.h"/>
+				<File RelativePath=".\type_.CAssigned_effectivityType.h"/>
+				<File RelativePath=".\type_.CEffective_elementType.h"/>
+				<File RelativePath=".\type_.CDescriptionType11.h"/>
+				<File RelativePath=".\type_.CRelatedType4.h"/>
+				<File RelativePath=".\type_.CRelatingType4.h"/>
+				<File RelativePath=".\type_.CLocationType.h"/>
+				<File RelativePath=".\type_.CDescriptionType12.h"/>
+				<File RelativePath=".\type_.CIs_defined_asType.h"/>
+				<File RelativePath=".\type_.CIs_defined_inType.h"/>
+				<File RelativePath=".\type_.CClassification_sourceType.h"/>
+				<File RelativePath=".\type_.CDescriptionType13.h"/>
+				<File RelativePath=".\type_.CUsed_classification_systemType2.h"/>
+				<File RelativePath=".\type_.CSub_classificationType.h"/>
+				<File RelativePath=".\type_.CSuper_classificationType.h"/>
+				<File RelativePath=".\type_.CDescriptionType14.h"/>
+				<File RelativePath=".\type_.CModel_placementType.h"/>
+				<File RelativePath=".\type_.CRelatedType5.h"/>
+				<File RelativePath=".\type_.CRelatingType5.h"/>
+				<File RelativePath=".\type_.CCoatingType.h"/>
+				<File RelativePath=".\type_.CCutting_conditionType.h"/>
+				<File RelativePath=".\type_.CSubstrateType.h"/>
+				<File RelativePath=".\type_.CWorkpiece_materialType.h"/>
+				<File RelativePath=".\type_.CRelatedType6.h"/>
+				<File RelativePath=".\type_.CRelatingType6.h"/>
+				<File RelativePath=".\type_.CDescriptionType15.h"/>
+				<File RelativePath=".\type_.CNameType4.h"/>
+				<File RelativePath=".\type_.CAssociated_characteristicType.h"/>
+				<File RelativePath=".\type_.CAssociated_itemType.h"/>
+				<File RelativePath=".\type_.CDescriptionType16.h"/>
+				<File RelativePath=".\type_.CRelatedType7.h"/>
+				<File RelativePath=".\type_.CRelatingType7.h"/>
+				<File RelativePath=".\type_.CDefinitionType.h"/>
+				<File RelativePath=".\type_.CDescriptionType17.h"/>
+				<File RelativePath=".\type_.CAssociated_itemType2.h"/>
+				<File RelativePath=".\type_.CDescriptionType18.h"/>
+				<File RelativePath=".\type_.CDescriptionType19.h"/>
+				<File RelativePath=".\type_.CRelatedType8.h"/>
+				<File RelativePath=".\type_.CRelatingType8.h"/>
+				<File RelativePath=".\type_.CMating_materialType.h"/>
+				<File RelativePath=".\type_.CRelatedType9.h"/>
+				<File RelativePath=".\type_.CRelatingType9.h"/>
+				<File RelativePath=".\type_.CAdditional_language_stringType.h"/>
+				<File RelativePath=".\type_.CPrimary_language_stringType.h"/>
+				<File RelativePath=".\type_.CDensityType.h"/>
+				<File RelativePath=".\type_.CHeightType.h"/>
+				<File RelativePath=".\type_.CWidthType.h"/>
+				<File RelativePath=".\type_.CReferenced_standardType.h"/>
+				<File RelativePath=".\type_.CUnit_componentType.h"/>
+				<File RelativePath=".\type_.CAssociated_organizationType.h"/>
+				<File RelativePath=".\type_.CAssociated_personType.h"/>
+				<File RelativePath=".\type_.CAssigned_person_organizationType.h"/>
+				<File RelativePath=".\type_.CDescriptionType20.h"/>
+				<File RelativePath=".\type_.CIs_applied_toType2.h"/>
+				<File RelativePath=".\type_.CFileType2.h"/>
+				<File RelativePath=".\type_.CLocated_itemType.h"/>
+				<File RelativePath=".\type_.CLocationType2.h"/>
+				<File RelativePath=".\type_.CAssociated_physical_itemType.h"/>
+				<File RelativePath=".\type_.CAssociated_stateType.h"/>
+				<File RelativePath=".\type_.CRelatedType10.h"/>
+				<File RelativePath=".\type_.CRelatingType10.h"/>
+				<File RelativePath=".\type_.CName_scopeType.h"/>
+				<File RelativePath=".\type_.CAllowed_unitType.h"/>
+				<File RelativePath=".\type_.CDescriptionType21.h"/>
+				<File RelativePath=".\type_.CProperty_sourceType.h"/>
+				<File RelativePath=".\type_.CDescriptionType22.h"/>
+				<File RelativePath=".\type_.CRelatedType11.h"/>
+				<File RelativePath=".\type_.CRelatingType11.h"/>
+				<File RelativePath=".\type_.CDescribed_elementType.h"/>
+				<File RelativePath=".\type_.CDescribing_property_valueType.h"/>
+				<File RelativePath=".\type_.CDescriptionType23.h"/>
+				<File RelativePath=".\type_.CValidity_contextType.h"/>
+				<File RelativePath=".\type_.CDefinitionType2.h"/>
+				<File RelativePath=".\type_.CGlobal_unitType.h"/>
+				<File RelativePath=".\type_.CSpecified_valueType.h"/>
+				<File RelativePath=".\type_.CDescriptionType24.h"/>
+				<File RelativePath=".\type_.CRelatedType12.h"/>
+				<File RelativePath=".\type_.CRelatingType12.h"/>
+				<File RelativePath=".\type_.CQuantityType.h"/>
+				<File RelativePath=".\type_.CPhysical_itemType.h"/>
+				<File RelativePath=".\type_.CRealized_item_versionType.h"/>
+				<File RelativePath=".\type_.CAssociated_itemType3.h"/>
+				<File RelativePath=".\type_.CDescriptionType25.h"/>
+				<File RelativePath=".\type_.CSub_classificationType2.h"/>
+				<File RelativePath=".\type_.CSuper_classificationType2.h"/>
+				<File RelativePath=".\type_.CValue_specificationType.h"/>
+				<File RelativePath=".\type_.CLanguage_specificationType.h"/>
+				<File RelativePath=".\type_.CAxis_1Type.h"/>
+				<File RelativePath=".\type_.CAxis_2Type.h"/>
+				<File RelativePath=".\type_.CLocal_originType.h"/>
+				<File RelativePath=".\type_.CAxis_3Type.h"/>
+				<File RelativePath=".\type_.CIs_defined_byType.h"/>
+				<File RelativePath=".\type_.CLimited_valueType.h"/>
+				<File RelativePath=".\type_.CValuesType.h"/>
+				<File RelativePath=".\type_.CDescriptionType26.h"/>
+				<File RelativePath=".\type_.CRepresentationType.h"/>
+				<File RelativePath=".\type_exp.Cfile_description.h"/>
+				<File RelativePath=".\type_exp.Cfile_name.h"/>
+				<File RelativePath=".\type_exp.Cfile_schema.h"/>
+				<File RelativePath=".\type_exp.Cschema_identifiersType.h"/>
+				<File RelativePath=".\type_xs.CENTITIES.h"/>
+				<File RelativePath=".\type_xs.CENTITY.h"/>
+				<File RelativePath=".\type_xs.CID.h"/>
+				<File RelativePath=".\type_xs.CIDREF.h"/>
+				<File RelativePath=".\type_xs.CIDREFS.h"/>
+				<File RelativePath=".\type_xs.CNCName.h"/>
+				<File RelativePath=".\type_xs.CNMTOKEN.h"/>
+				<File RelativePath=".\type_xs.CNMTOKENS.h"/>
+				<File RelativePath=".\type_xs.CNOTATION.h"/>
+				<File RelativePath=".\type_xs.CName.h"/>
+				<File RelativePath=".\type_xs.CQName.h"/>
+				<File RelativePath=".\type_xs.CanySimpleType.h"/>
+				<File RelativePath=".\type_xs.CanyType.h"/>
+				<File RelativePath=".\type_xs.CanyURI.h"/>
+				<File RelativePath=".\type_xs.Cbase64Binary.h"/>
+				<File RelativePath=".\type_xs.Cboolean.h"/>
+				<File RelativePath=".\type_xs.Cbyte.h"/>
+				<File RelativePath=".\type_xs.Cdate.h"/>
+				<File RelativePath=".\type_xs.CdateTime.h"/>
+				<File RelativePath=".\type_xs.Cdecimal.h"/>
+				<File RelativePath=".\type_xs.Cdouble.h"/>
+				<File RelativePath=".\type_xs.Cduration.h"/>
+				<File RelativePath=".\type_xs.Cfloat.h"/>
+				<File RelativePath=".\type_xs.CgDay.h"/>
+				<File RelativePath=".\type_xs.CgMonth.h"/>
+				<File RelativePath=".\type_xs.CgMonthDay.h"/>
+				<File RelativePath=".\type_xs.CgYear.h"/>
+				<File RelativePath=".\type_xs.CgYearMonth.h"/>
+				<File RelativePath=".\type_xs.ChexBinary.h"/>
+				<File RelativePath=".\type_xs.Cint.h"/>
+				<File RelativePath=".\type_xs.Cinteger.h"/>
+				<File RelativePath=".\type_xs.Clanguage.h"/>
+				<File RelativePath=".\type_xs.Clong.h"/>
+				<File RelativePath=".\type_xs.CnegativeInteger.h"/>
+				<File RelativePath=".\type_xs.CnonNegativeInteger.h"/>
+				<File RelativePath=".\type_xs.CnonPositiveInteger.h"/>
+				<File RelativePath=".\type_xs.CnormalizedString.h"/>
+				<File RelativePath=".\type_xs.CpositiveInteger.h"/>
+				<File RelativePath=".\type_xs.Cshort.h"/>
+				<File RelativePath=".\type_xs.Cstring.h"/>
+				<File RelativePath=".\type_xs.Ctime.h"/>
+				<File RelativePath=".\type_xs.Ctoken.h"/>
+				<File RelativePath=".\type_xs.CunsignedByte.h"/>
+				<File RelativePath=".\type_xs.CunsignedInt.h"/>
+				<File RelativePath=".\type_xs.CunsignedLong.h"/>
+				<File RelativePath=".\type_xs.CunsignedShort.h"/>
+				<File RelativePath=".\type_xs.CstringType.h"/>
+				<File RelativePath=".\type_xs.CbooleanType.h"/>
+			</Filter>
+		</Filter>
+		<Filter
+			Name="Resource Files"
+			Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx"
+			UniqueIdentifier="{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}"
+			>
+		</Filter>
+		<Filter
+			Name="Source Files"
+			Filter="cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx"
+			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
+			>
+			<File
+				RelativePath=".\cutting_tool_schema_arm.cpp"
+				>
+			</File>
+
+			<File RelativePath=".\cutting_tool_schema_arm-typeinfo.cpp"/>
+			<File
+				RelativePath=".\StdAfx.cpp"
+				>
+				<FileConfiguration
+					Name="Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						UsePrecompiledHeader="1"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						UsePrecompiledHeader="1"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Unicode Debug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						UsePrecompiledHeader="1"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Unicode Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						UsePrecompiledHeader="1"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Debug|x64"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						UsePrecompiledHeader="1"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Release|x64"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						UsePrecompiledHeader="1"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Unicode Debug|x64"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						UsePrecompiledHeader="1"
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="Unicode Release|x64"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						UsePrecompiledHeader="1"
+					/>
+				</FileConfiguration>
+			</File>
+		</Filter>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

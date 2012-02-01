@@ -1,0 +1,39 @@
+ISO-10303-21;
+HEADER;
+FILE_DESCRIPTION(
+/* description */ (''),
+/* implementation_level */ '2;1');
+FILE_NAME(
+/* name */ '',
+/* time_stamp */ '2011-12-01T21:00:10',
+/* author */ ('Mikael Hedlind'),
+/* organization */ ('KTH Royal Institute of Technology'),
+/* preprocessor_version */ '',
+/* originating_system */ '',
+/* authorization */ 'mikael.hedlind@iip.kth.se');
+FILE_SCHEMA(('AP242_MANAGED_MODEL_BASED_3D_ENGINEERING_MIM'));
+ENDSEC;
+DATA;
+#1 = PRODUCT('1','M-32C5',$,(#6));
+#2 = PRODUCT_DEFINITION_FORMATION('1',$,#1);
+#3 = PRODUCT_DEFINITION('1',$,#2,#7);
+#4 = PRODUCT_DEFINITION('2',$,#2,#7);
+#5 = PRODUCT_DEFINITION('3',$,#2,#7);
+#6 = PRODUCT_CONTEXT('',#8,'mechanical');
+#7 = PRODUCT_DEFINITION_CONTEXT('',#8,'usage');
+#8 = APPLICATION_CONTEXT('process planning');
+#9 = APPLICATION_PROTOCOL_DEFINITION('','ap242_managed_model_based_3d_engineering',2011,#8);
+#10 = PRODUCT_RELATED_PRODUCT_CATEGORY('tool item',$,(#1));
+#11 = APPLIED_CLASSIFICATION_ASSIGNMENT(#13,#18,(#3));
+#12 = APPLIED_CLASSIFICATION_ASSIGNMENT(#14,#18,(#4,#5));
+#13 = EXTERNALLY_DEFINED_CLASS('end mill','',IDENTIFIER('71E01A05D27A8'),#21);
+#14 = EXTERNALLY_DEFINED_CLASS('boring bar','',IDENTIFIER('71E01A0E9CBA9'),#21);
+#15 = APPLIED_EXTERNAL_IDENTIFICATION_ASSIGNMENT('001',#16,#21,(#13,#14));
+#16 = IDENTIFICATION_ROLE('version','');
+#17 = APPLIED_ORGANIZATION_ASSIGNMENT(#19,#20,(#13,#14));
+#18 = CLASSIFICATION_ROLE('non-definition',$);
+#19 = ORGANIZATION('0112/1///13399__001','International Organization for Standardization','ISO 13399');
+#20 = ORGANIZATION_ROLE('class supplier');
+#21 = KNOWN_SOURCE(IDENTIFIER('ISO 13399'),'ISO 13584 library');
+ENDSEC;
+END-ISO-10303-21;

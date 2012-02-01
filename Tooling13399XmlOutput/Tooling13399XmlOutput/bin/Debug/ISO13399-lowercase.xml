@@ -1,0 +1,2837 @@
+<?xml version="1.0" encoding="utf-8"?>
+ 
+<uos xmlns:xsi="http://www.w3.org/2001/xmlschema-instance"
+xmlns:xs="http://www.w3.org/2001/xmlschema">
+
+
+<organization id="id-0">
+	<delivery_address>someotherstreet 2, sometown, sweden</delivery_address>
+	<Id>se556677889901</Id>
+	<organization_name>ctc -cutting tool company</organization_name>
+	<organization_type>company</organization_type>
+	<postal_address>box 0000, sometown, sweden</postal_address>
+	<visitor_address>somestreet 1,sometown, sweden</visitor_address>
+</organization>
+
+<organization id="id-1">
+	<delivery_address>someotherstreet 1, sometown, usa</delivery_address>
+	<Id>11-222-3344</Id>
+	<organization_name>cctc -competing cutting tool company</organization_name>
+	<organization_type>company</organization_type>
+	<postal_address>pobox 000, sometown, usa</postal_address>
+	<visitor_address>somestreet1, sometown, usa</visitor_address>
+</organization>
+
+<organization id="id-2">
+	<delivery_address>anotherstreet 1, atown, acountry</delivery_address>
+	<Id>87391874</Id>
+	<organization_name>mfg -manufacturing company</organization_name>
+	<organization_type>company</organization_type>
+	<postal_address>111, atown, acountry</postal_address>
+	<visitor_address>astreet 1, atown,acountry</visitor_address>
+</organization>
+
+<state id="id-3">
+	<name>blunt edge</name>
+</state>
+
+<item_characteristic_association id="id-4">
+	<associated_characteristic>
+		<grade xsi:nil="true" ref="id-5"/>
+	</associated_characteristic>
+	<associated_item>
+		<item_definition xsi:nil="true" ref="id-6"/>
+	</associated_item>
+	<relation_type>has characteristic</relation_type>
+</item_characteristic_association>
+
+<item_characteristic_association id="id-7">
+	<associated_characteristic>
+		<workpiece_feature xsi:nil="true" ref="id-8"/>
+	</associated_characteristic>
+	<associated_item>
+		<item_definition xsi:nil="true" ref="id-9"/>
+	</associated_item>
+	<relation_type>used for</relation_type>
+</item_characteristic_association>
+
+<string_value id="id-10">
+	<value_name>/ignore</value_name>
+	<value_specification>
+		<multi_language_string xsi:nil="true" ref="id-11"/>
+	</value_specification>
+</string_value>
+
+<string_value id="id-12">
+	<value_name>/ignore</value_name>
+	<value_specification>
+		<multi_language_string xsi:nil="true" ref="id-13"/>
+	</value_specification>
+</string_value>
+
+<unit id="id-14">
+	<unit_name>mm</unit_name>
+</unit>
+
+<unit id="id-15">
+	<unit_name>deg</unit_name>
+</unit>
+
+<assembly_association id="id-16">
+	<placement>
+		<geometric_model_relationship_with_transformation xsi:nil="true" ref="id-17"/>
+	</placement>
+	<related>
+		<item_instance xsi:nil="true" ref="id-18"/>
+	</related>
+	<relating>
+		<assembly_definition xsi:nil="true" ref="id-19"/>
+	</relating>
+</assembly_association>
+
+<assembly_association id="id-20">
+	<related>
+		<item_instance xsi:nil="true" ref="id-21"/>
+	</related>
+	<relating>
+		<assembly_definition xsi:nil="true" ref="id-19"/>
+	</relating>
+</assembly_association>
+
+<assembly_association id="id-22">
+	<placement>
+		<geometric_model_relationship_with_transformation xsi:nil="true" ref="id-23"/>
+	</placement>
+	<related>
+		<item_instance xsi:nil="true" ref="id-24"/>
+	</related>
+	<relating>
+		<assembly_definition xsi:nil="true" ref="id-19"/>
+	</relating>
+</assembly_association>
+
+<assembly_association id="id-25">
+	<related>
+		<item_instance xsi:nil="true" ref="id-26"/>
+	</related>
+	<relating>
+		<assembly_definition xsi:nil="true" ref="id-19"/>
+	</relating>
+</assembly_association>
+
+<assembly_association id="id-27">
+	<related>
+		<item_instance xsi:nil="true" ref="id-28"/>
+	</related>
+	<relating>
+		<assembly_definition xsi:nil="true" ref="id-19"/>
+	</relating>
+</assembly_association>
+
+<assembly_association id="id-29">
+	<placement>
+		<geometric_model_relationship_with_transformation xsi:nil="true" ref="id-30"/>
+	</placement>
+	<related>
+		<item_instance xsi:nil="true" ref="id-31"/>
+	</related>
+	<relating>
+		<assembly_definition xsi:nil="true" ref="id-19"/>
+	</relating>
+</assembly_association>
+
+<assembly_association id="id-32">
+	<placement>
+		<geometric_model_relationship_with_transformation xsi:nil="true" ref="id-33"/>
+	</placement>
+	<related>
+		<item_instance xsi:nil="true" ref="id-34"/>
+	</related>
+	<relating>
+		<assembly_definition xsi:nil="true" ref="id-19"/>
+	</relating>
+</assembly_association>
+
+<physical_item_structure_association id="id-35">
+	<related>
+		<physical_item_definition xsi:nil="true" ref="id-36"/>
+	</related>
+	<relating>
+		<physical_item_definition xsi:nil="true" ref="id-37"/>
+	</relating>
+</physical_item_structure_association>
+
+<physical_item_structure_association id="id-38">
+	<related>
+		<physical_item_definition xsi:nil="true" ref="id-39"/>
+	</related>
+	<relating>
+		<physical_item_definition xsi:nil="true" ref="id-37"/>
+	</relating>
+</physical_item_structure_association>
+
+<plib_property_reference id="id-40">
+	<code>71ed6aa478a3d</code>
+	<name_scope>
+		<plib_class_reference xsi:nil="true" ref="id-41"/>
+	</name_scope>
+	<version>001</version>
+</plib_property_reference>
+
+<plib_property_reference id="id-42">
+	<code>71dcd39338974</code>
+	<name_scope>
+		<plib_class_reference xsi:nil="true" ref="id-43"/>
+	</name_scope>
+	<version>001</version>
+</plib_property_reference>
+
+<plib_property_reference id="id-44">
+	<code>71dcd39338974</code>
+	<name_scope>
+		<plib_class_reference xsi:nil="true" ref="id-45"/>
+	</name_scope>
+	<version>001</version>
+</plib_property_reference>
+
+<plib_property_reference id="id-46">
+	<code>71ed6aa478a3d</code>
+	<name_scope>
+		<plib_class_reference xsi:nil="true" ref="id-43"/>
+	</name_scope>
+	<version>001</version>
+</plib_property_reference>
+
+<plib_property_reference id="id-47">
+	<code>71ed6a9af7d1d</code>
+	<name_scope>
+		<plib_class_reference xsi:nil="true" ref="id-43"/>
+	</name_scope>
+	<version>001</version>
+</plib_property_reference>
+
+<plib_property_reference id="id-48">
+	<code>71d08096f930c</code>
+	<name_scope>
+		<plib_class_reference xsi:nil="true" ref="id-43"/>
+	</name_scope>
+	<version>001</version>
+</plib_property_reference>
+
+<plib_property_reference id="id-49">
+	<code>71d102ae3b252</code>
+	<name_scope>
+		<plib_class_reference xsi:nil="true" ref="id-43"/>
+	</name_scope>
+	<version>001</version>
+</plib_property_reference>
+
+<plib_property_reference id="id-50">
+	<code>71ebdbf130ae6</code>
+	<name_scope>
+		<plib_class_reference xsi:nil="true" ref="id-51"/>
+	</name_scope>
+	<version>001</version>
+</plib_property_reference>
+
+<plib_property_reference id="id-52">
+	<code>71ebdbf5060e6</code>
+	<name_scope>
+		<plib_class_reference xsi:nil="true" ref="id-41"/>
+	</name_scope>
+	<version>001</version>
+</plib_property_reference>
+
+<plib_property_reference id="id-53">
+	<code>71d08462f8185</code>
+	<name_scope>
+		<plib_class_reference xsi:nil="true" ref="id-41"/>
+	</name_scope>
+	<version>001</version>
+</plib_property_reference>
+
+<numerical_value id="id-54">
+	<value_name>/ignore</value_name>
+	<unit_component>
+		<unit xsi:nil="true" ref="id-14"/>
+	</unit_component>
+	<value_component>150</value_component>
+</numerical_value>
+
+<numerical_value id="id-55">
+	<value_name>/ignore</value_name>
+	<unit_component>
+		<unit xsi:nil="true" ref="id-14"/>
+	</unit_component>
+	<value_component>10</value_component>
+</numerical_value>
+
+<numerical_value id="id-56">
+	<value_name>/ignore</value_name>
+	<unit_component>
+		<unit xsi:nil="true" ref="id-14"/>
+	</unit_component>
+	<value_component>15</value_component>
+</numerical_value>
+
+<numerical_value id="id-57">
+	<value_name>/ignore</value_name>
+	<unit_component>
+		<unit xsi:nil="true" ref="id-14"/>
+	</unit_component>
+	<value_component>15</value_component>
+</numerical_value>
+
+<numerical_value id="id-58">
+	<value_name>v1</value_name>
+	<value_component>10</value_component>
+</numerical_value>
+
+<numerical_value id="id-59">
+	<value_name>v2</value_name>
+	<value_component>15</value_component>
+</numerical_value>
+
+<numerical_value id="id-60">
+	<value_name>v3</value_name>
+	<value_component>20</value_component>
+</numerical_value>
+
+<numerical_value id="id-61">
+	<value_name>/ignore</value_name>
+	<value_component>30</value_component>
+</numerical_value>
+
+<numerical_value id="id-62">
+	<value_name>/ignore</value_name>
+	<value_component>40</value_component>
+</numerical_value>
+
+<numerical_value id="id-63">
+	<value_name>/ignore</value_name>
+	<unit_component>
+		<unit xsi:nil="true" ref="id-14"/>
+	</unit_component>
+	<value_component>30</value_component>
+</numerical_value>
+
+<property id="id-64">
+	<allowed_unit></allowed_unit>
+	<description>
+<default_language_string-wrapper>/ignore</default_language_string-wrapper>
+</description>
+	<Id>/ignore</Id>
+	<property_source>
+		<plib_property_reference xsi:nil="true" ref="id-40"/>
+	</property_source>
+	<property_type>/ignore</property_type>
+	<version_id>/ignore</version_id>
+</property>
+
+<property id="id-65">
+	<allowed_unit></allowed_unit>
+	<description>
+<default_language_string-wrapper>/ignore</default_language_string-wrapper>
+</description>
+	<Id>/ignore</Id>
+	<property_source>
+		<plib_property_reference xsi:nil="true" ref="id-47"/>
+	</property_source>
+	<property_type>/ignore</property_type>
+	<version_id>/ignore</version_id>
+</property>
+
+<property id="id-66">
+	<allowed_unit></allowed_unit>
+	<description>
+<default_language_string-wrapper>/ignore</default_language_string-wrapper>
+</description>
+	<Id>/ignore</Id>
+	<property_source>
+		<plib_property_reference xsi:nil="true" ref="id-44"/>
+	</property_source>
+	<property_type>/ignore</property_type>
+	<version_id>/ignore</version_id>
+</property>
+
+<property id="id-67">
+	<allowed_unit></allowed_unit>
+	<description>
+<default_language_string-wrapper>/ignore</default_language_string-wrapper>
+</description>
+	<Id>/ignore</Id>
+	<property_source>
+		<plib_property_reference xsi:nil="true" ref="id-46"/>
+	</property_source>
+	<property_type>/ignore</property_type>
+	<version_id>/ignore</version_id>
+</property>
+
+<property id="id-68">
+	<allowed_unit></allowed_unit>
+	<description>
+<default_language_string-wrapper>/ignore</default_language_string-wrapper>
+</description>
+	<Id>/ignore</Id>
+	<property_source>
+		<plib_property_reference xsi:nil="true" ref="id-48"/>
+	</property_source>
+	<property_type>/ignore</property_type>
+	<version_id>/ignore</version_id>
+</property>
+
+<property id="id-69">
+	<allowed_unit></allowed_unit>
+	<description>
+<default_language_string-wrapper>/ignore</default_language_string-wrapper>
+</description>
+	<Id>/ignore</Id>
+	<property_source>
+		<plib_property_reference xsi:nil="true" ref="id-49"/>
+	</property_source>
+	<property_type>/ignore</property_type>
+	<version_id>/ignore</version_id>
+</property>
+
+<property id="id-70">
+	<allowed_unit></allowed_unit>
+	<description>
+<default_language_string-wrapper>/ignore</default_language_string-wrapper>
+</description>
+	<Id>/ignore</Id>
+	<property_source>
+		<external_library_reference xsi:nil="true" ref="id-71"/>
+	</property_source>
+	<property_type>/ignore</property_type>
+	<version_id>/ignore</version_id>
+</property>
+
+<property id="id-72">
+	<allowed_unit>
+		<unit xsi:nil="true" ref="id-14"/>
+	</allowed_unit>
+	<description>
+		<multi_language_string xsi:nil="true" ref="id-73"/>
+	</description>
+	<Id>001</Id>
+	<property_type>specification</property_type>
+	<version_id>001</version_id>
+</property>
+
+<property id="id-74">
+	<allowed_unit></allowed_unit>
+	<description>
+		<multi_language_string xsi:nil="true" ref="id-75"/>
+	</description>
+	<Id>001</Id>
+	<property_type>specification</property_type>
+	<version_id>002</version_id>
+</property>
+
+<property id="id-76">
+	<allowed_unit></allowed_unit>
+	<description>
+<default_language_string-wrapper>/ignore</default_language_string-wrapper>
+</description>
+	<Id>/ignore</Id>
+	<property_source>
+		<plib_property_reference xsi:nil="true" ref="id-50"/>
+	</property_source>
+	<property_type>/ignore</property_type>
+	<version_id>/ignore</version_id>
+</property>
+
+<property id="id-77">
+	<allowed_unit></allowed_unit>
+	<description>
+<default_language_string-wrapper>/ignore</default_language_string-wrapper>
+</description>
+	<Id>/ignore</Id>
+	<property_source>
+		<plib_property_reference xsi:nil="true" ref="id-52"/>
+	</property_source>
+	<property_type>/ignore</property_type>
+	<version_id>/ignore</version_id>
+</property>
+
+<property id="id-78">
+	<allowed_unit></allowed_unit>
+	<Id>/ignore</Id>
+	<property_source>
+		<plib_property_reference xsi:nil="true" ref="id-52"/>
+	</property_source>
+	<property_type>/ignore</property_type>
+	<version_id>/ignore</version_id>
+</property>
+
+<property id="id-79">
+	<allowed_unit></allowed_unit>
+	<description>
+<default_language_string-wrapper>/ignore</default_language_string-wrapper>
+</description>
+	<Id>/ignore</Id>
+	<property_source>
+		<plib_property_reference xsi:nil="true" ref="id-53"/>
+	</property_source>
+	<property_type>/ignore</property_type>
+	<version_id>/ignore</version_id>
+</property>
+
+<realized_item_association id="id-80">
+	<physical_item>
+		<physical_item xsi:nil="true" ref="id-81"/>
+	</physical_item>
+	<realized_item_version>
+		<item_version xsi:nil="true" ref="id-82"/>
+	</realized_item_version>
+</realized_item_association>
+
+<mating_association id="id-83">
+	<related>
+		<item_instance xsi:nil="true" ref="id-18"/>
+	</related>
+	<relating>
+		<mating_definition xsi:nil="true" ref="id-84"/>
+	</relating>
+</mating_association>
+
+<mating_association id="id-85">
+	<related>
+		<item_instance xsi:nil="true" ref="id-21"/>
+	</related>
+	<relating>
+		<mating_definition xsi:nil="true" ref="id-84"/>
+	</relating>
+</mating_association>
+
+<mating_association id="id-86">
+	<related>
+		<item_instance xsi:nil="true" ref="id-18"/>
+	</related>
+	<relating>
+		<mating_definition xsi:nil="true" ref="id-87"/>
+	</relating>
+</mating_association>
+
+<mating_association id="id-88">
+	<related>
+		<item_instance xsi:nil="true" ref="id-24"/>
+	</related>
+	<relating>
+		<mating_definition xsi:nil="true" ref="id-87"/>
+	</relating>
+</mating_association>
+
+<document_creation_property id="id-89">
+	<creating_system>cad system 1</creating_system>
+	<operating_system>windowsxp</operating_system>
+</document_creation_property>
+
+<property_value_association id="id-90">
+	<described_element>
+		<item_definition xsi:nil="true" ref="id-9"/>
+	</described_element>
+	<describing_property_value>
+		<property_value_representation xsi:nil="true" ref="id-91"/>
+	</describing_property_value>
+</property_value_association>
+
+<property_value_association id="id-92">
+	<described_element>
+		<item_definition xsi:nil="true" ref="id-93"/>
+	</described_element>
+	<describing_property_value>
+		<property_value_representation xsi:nil="true" ref="id-94"/>
+	</describing_property_value>
+</property_value_association>
+
+<property_value_association id="id-95">
+	<described_element>
+		<item_definition xsi:nil="true" ref="id-96"/>
+	</described_element>
+	<describing_property_value>
+		<property_value_representation xsi:nil="true" ref="id-97"/>
+	</describing_property_value>
+</property_value_association>
+
+<property_value_association id="id-98">
+	<described_element>
+		<item_definition xsi:nil="true" ref="id-99"/>
+	</described_element>
+	<describing_property_value>
+		<property_value_representation xsi:nil="true" ref="id-100"/>
+	</describing_property_value>
+</property_value_association>
+
+<property_value_association id="id-101">
+	<described_element>
+		<item_definition xsi:nil="true" ref="id-93"/>
+	</described_element>
+	<describing_property_value>
+		<property_value_representation xsi:nil="true" ref="id-102"/>
+	</describing_property_value>
+</property_value_association>
+
+<property_value_association id="id-103">
+	<described_element>
+		<item_definition xsi:nil="true" ref="id-93"/>
+	</described_element>
+	<describing_property_value>
+		<property_value_representation xsi:nil="true" ref="id-104"/>
+	</describing_property_value>
+</property_value_association>
+
+<property_value_association id="id-105">
+	<described_element>
+		<item_definition xsi:nil="true" ref="id-93"/>
+	</described_element>
+	<describing_property_value>
+		<property_value_representation xsi:nil="true" ref="id-106"/>
+	</describing_property_value>
+</property_value_association>
+
+<property_value_association id="id-107">
+	<described_element>
+		<item_definition xsi:nil="true" ref="id-9"/>
+	</described_element>
+	<describing_property_value>
+		<property_value_representation xsi:nil="true" ref="id-108"/>
+	</describing_property_value>
+</property_value_association>
+
+<property_value_association id="id-109">
+	<described_element>
+		<item_definition xsi:nil="true" ref="id-9"/>
+	</described_element>
+	<describing_property_value>
+		<property_value_representation xsi:nil="true" ref="id-110"/>
+	</describing_property_value>
+</property_value_association>
+
+<property_value_association id="id-111">
+	<described_element>
+		<item_definition xsi:nil="true" ref="id-93"/>
+	</described_element>
+	<describing_property_value>
+		<property_value_representation xsi:nil="true" ref="id-112"/>
+	</describing_property_value>
+</property_value_association>
+
+<property_value_association id="id-113">
+	<described_element>
+		<item_definition xsi:nil="true" ref="id-93"/>
+	</described_element>
+	<describing_property_value>
+		<property_value_representation xsi:nil="true" ref="id-114"/>
+	</describing_property_value>
+</property_value_association>
+
+<property_value_association id="id-115">
+	<described_element>
+		<item_definition xsi:nil="true" ref="id-93"/>
+	</described_element>
+	<describing_property_value>
+		<property_value_representation xsi:nil="true" ref="id-116"/>
+	</describing_property_value>
+</property_value_association>
+
+<property_value_association id="id-117">
+	<described_element>
+		<assembly_definition xsi:nil="true" ref="id-19"/>
+	</described_element>
+	<describing_property_value>
+		<property_value_representation xsi:nil="true" ref="id-118"/>
+	</describing_property_value>
+</property_value_association>
+
+<property_value_association id="id-119">
+	<described_element>
+		<assembly_definition xsi:nil="true" ref="id-19"/>
+	</described_element>
+	<describing_property_value>
+		<property_value_representation xsi:nil="true" ref="id-120"/>
+	</describing_property_value>
+</property_value_association>
+
+<document_version id="id-121">
+	<associated_document>
+		<document xsi:nil="true" ref="id-122"/>
+	</associated_document>
+	<Id>984327-a</Id>
+</document_version>
+
+<document_version id="id-123">
+	<associated_document>
+		<document xsi:nil="true" ref="id-122"/>
+	</associated_document>
+	<Id></Id>
+</document_version>
+
+<document_version id="id-124">
+	<associated_document>
+		<document xsi:nil="true" ref="id-125"/>
+	</associated_document>
+	<Id>doc-tool456-1</Id>
+</document_version>
+
+<document_version id="id-126">
+	<associated_document>
+		<document xsi:nil="true" ref="id-127"/>
+	</associated_document>
+	<Id>doc-tool678-1</Id>
+</document_version>
+
+<effectivity_assignment id="id-128">
+	<assigned_effectivity>
+		<effectivity xsi:nil="true" ref="id-129"/>
+	</assigned_effectivity>
+	<effective_element>
+		<item_version xsi:nil="true" ref="id-82"/>
+	</effective_element>
+	<effectivity_indication>true</effectivity_indication>
+	<role>planned</role>
+</effectivity_assignment>
+
+<effectivity_assignment id="id-130">
+	<assigned_effectivity>
+		<effectivity xsi:nil="true" ref="id-131"/>
+	</assigned_effectivity>
+	<effective_element>
+		<item_version xsi:nil="true" ref="id-132"/>
+	</effective_element>
+	<effectivity_indication>true</effectivity_indication>
+	<role>planned</role>
+</effectivity_assignment>
+
+<effectivity_relationship id="id-133">
+	<related>
+		<effectivity xsi:nil="true" ref="id-131"/>
+	</related>
+	<relating>
+		<effectivity xsi:nil="true" ref="id-129"/>
+	</relating>
+	<relation_type>inheritance</relation_type>
+</effectivity_relationship>
+
+<duration id="id-134">
+	<time>130</time>
+	<time_unit>day</time_unit>
+</duration>
+
+<item_definition_relationship id="id-135">
+	<related>
+		<item_definition xsi:nil="true" ref="id-6"/>
+	</related>
+	<relating>
+		<item_definition xsi:nil="true" ref="id-9"/>
+	</relating>
+	<relation_type>compatible</relation_type>
+</item_definition_relationship>
+
+<item_definition_relationship id="id-136">
+	<related>
+		<item_definition xsi:nil="true" ref="id-137"/>
+	</related>
+	<relating>
+		<item_definition xsi:nil="true" ref="id-9"/>
+	</relating>
+	<relation_type>substitutable</relation_type>
+</item_definition_relationship>
+
+<item_definition_relationship id="id-138">
+	<related>
+		<physical_item_definition xsi:nil="true" ref="id-36"/>
+	</related>
+	<relating>
+		<item_definition xsi:nil="true" ref="id-9"/>
+	</relating>
+	<relation_type>realized definition</relation_type>
+</item_definition_relationship>
+
+<item id="id-139">
+	<description>
+		<multi_language_string xsi:nil="true" ref="id-140"/>
+	</description>
+	<Id>984327</Id>
+	<name>
+		<multi_language_string xsi:nil="true" ref="id-141"/>
+	</name>
+</item>
+
+<item id="id-142">
+	<Id>576321</Id>
+	<name>
+		<multi_language_string xsi:nil="true" ref="id-143"/>
+	</name>
+</item>
+
+<item id="id-144">
+	<Id>63214871</Id>
+	<name>
+		<multi_language_string xsi:nil="true" ref="id-145"/>
+	</name>
+</item>
+
+<item id="id-146">
+	<description>
+		<multi_language_string xsi:nil="true" ref="id-147"/>
+	</description>
+	<Id>tool123</Id>
+	<name>
+		<multi_language_string xsi:nil="true" ref="id-148"/>
+	</name>
+</item>
+
+<item id="id-149">
+	<Id>8237</Id>
+	<name>
+		<multi_language_string xsi:nil="true" ref="id-150"/>
+	</name>
+</item>
+
+<item id="id-151">
+	<Id>29843435</Id>
+	<name>
+		<multi_language_string xsi:nil="true" ref="id-152"/>
+	</name>
+</item>
+
+<item id="id-153">
+	<Id>a54b67</Id>
+	<name>
+		<multi_language_string xsi:nil="true" ref="id-154"/>
+	</name>
+</item>
+
+<item id="id-155">
+	<Id>765432</Id>
+	<name>
+		<multi_language_string xsi:nil="true" ref="id-156"/>
+	</name>
+</item>
+
+<item id="id-157">
+	<Id>765433</Id>
+	<name>
+		<multi_language_string xsi:nil="true" ref="id-158"/>
+	</name>
+</item>
+
+<item id="id-159">
+	<Id>12346-678</Id>
+	<name>
+		<multi_language_string xsi:nil="true" ref="id-160"/>
+	</name>
+</item>
+
+<item id="id-161">
+	<Id></Id>
+	<name>
+		<multi_language_string xsi:nil="true" ref="id-162"/>
+	</name>
+</item>
+
+<item id="id-163">
+	<Id></Id>
+	<name>
+		<multi_language_string xsi:nil="true" ref="id-164"/>
+	</name>
+</item>
+
+<document id="id-122">
+	<document_id>984327</document_id>
+	<name>
+		<multi_language_string xsi:nil="true" ref="id-165"/>
+	</name>
+</document>
+
+<document id="id-125">
+	<document_id></document_id>
+	<name>
+		<multi_language_string xsi:nil="true" ref="id-166"/>
+	</name>
+</document>
+
+<document id="id-127">
+	<document_id></document_id>
+	<name>
+		<multi_language_string xsi:nil="true" ref="id-167"/>
+	</name>
+</document>
+
+<grade id="id-5">
+	<coating>
+		<coating xsi:nil="true" ref="id-168"/>
+	</coating>
+	<cutting_condition>
+		<cutting_condition xsi:nil="true" ref="id-169"/>
+	</cutting_condition>
+	<identifier>1025 gc</identifier>
+	<standard_designation>hc</standard_designation>
+	<substrate>
+		<substrate xsi:nil="true" ref="id-170"/>
+	</substrate>
+	<workpiece_material>
+		<material_designation xsi:nil="true" ref="id-171"/>
+	</workpiece_material>
+</grade>
+
+<application_context id="id-172">
+	<application_domain>process planning</application_domain>
+</application_context>
+
+<value_limit id="id-173">
+	<value_name>/ignore</value_name>
+	<unit_component>
+		<unit xsi:nil="true" ref="id-15"/>
+	</unit_component>
+	<limit>45</limit>
+	<limit_qualifier>5</limit_qualifier>
+</value_limit>
+
+<document_format_property id="id-174">
+	<character_code>iso 8859-1</character_code>
+	<data_format>iso 10303-214</data_format>
+</document_format_property>
+
+<geometric_model_relationship_with_transformation id="id-17">
+	<model_placement>
+		<transformation_3d xsi:nil="true" ref="id-175"/>
+	</model_placement>
+	<related>
+		<external_geometric_model xsi:nil="true" ref="id-176"/>
+	</related>
+	<relating>
+		<external_geometric_model xsi:nil="true" ref="id-177"/>
+	</relating>
+	<relation_type>hierarchy</relation_type>
+</geometric_model_relationship_with_transformation>
+
+<geometric_model_relationship_with_transformation id="id-23">
+	<model_placement>
+		<transformation_3d xsi:nil="true" ref="id-178"/>
+	</model_placement>
+	<related>
+		<external_geometric_model xsi:nil="true" ref="id-179"/>
+	</related>
+	<relating>
+		<external_geometric_model xsi:nil="true" ref="id-177"/>
+	</relating>
+	<relation_type>hierarchy</relation_type>
+</geometric_model_relationship_with_transformation>
+
+<geometric_model_relationship_with_transformation id="id-30">
+	<model_placement>
+		<transformation_2d xsi:nil="true" ref="id-180"/>
+	</model_placement>
+	<related>
+		<external_picture xsi:nil="true" ref="id-181"/>
+	</related>
+	<relating>
+		<external_picture xsi:nil="true" ref="id-182"/>
+	</relating>
+	<relation_type>hierarchy</relation_type>
+</geometric_model_relationship_with_transformation>
+
+<geometric_model_relationship_with_transformation id="id-33">
+	<model_placement>
+		<transformation_2d xsi:nil="true" ref="id-183"/>
+	</model_placement>
+	<related>
+		<external_picture xsi:nil="true" ref="id-184"/>
+	</related>
+	<relating>
+		<external_picture xsi:nil="true" ref="id-182"/>
+	</relating>
+	<relation_type>hierarchy</relation_type>
+</geometric_model_relationship_with_transformation>
+
+<document_location_property id="id-185">
+	<location_name>.\</location_name>
+</document_location_property>
+
+<document_location_property id="id-186">
+	<location_name>.\</location_name>
+</document_location_property>
+
+<external_file_id_and_location id="id-187">
+	<external_id>file_984327-a-1</external_id>
+	<location>
+		<document_location_property xsi:nil="true" ref="id-185"/>
+	</location>
+</external_file_id_and_location>
+
+<external_file_id_and_location id="id-188">
+	<external_id>file-doc-tool456-1-1.3d</external_id>
+	<location>
+		<document_location_property xsi:nil="true" ref="id-186"/>
+	</location>
+</external_file_id_and_location>
+
+<external_file_id_and_location id="id-189">
+	<external_id>file-doc-678-1-1</external_id>
+	<location>
+		<document_location_property xsi:nil="true" ref="id-186"/>
+	</location>
+</external_file_id_and_location>
+
+<external_file_id_and_location id="id-190">
+	<external_id>file_123-a-1</external_id>
+	<location>
+		<document_location_property xsi:nil="true" ref="id-186"/>
+	</location>
+</external_file_id_and_location>
+
+<external_file_id_and_location id="id-191">
+	<external_id>file2d_tool123-1-1</external_id>
+	<location>
+		<document_location_property xsi:nil="true" ref="id-186"/>
+	</location>
+</external_file_id_and_location>
+
+<external_picture id="id-181">
+	<is_defined_as>
+		<digital_file xsi:nil="true" ref="id-192"/>
+	</is_defined_as>
+	<is_defined_in>
+		<cartesian_coordinate_space_2d xsi:nil="true" ref="id-193"/>
+	</is_defined_in>
+	<model_id>model2d_984327-a-1</model_id>
+</external_picture>
+
+<external_picture id="id-184">
+	<is_defined_as>
+		<digital_file xsi:nil="true" ref="id-194"/>
+	</is_defined_as>
+	<is_defined_in>
+		<cartesian_coordinate_space_2d xsi:nil="true" ref="id-193"/>
+	</is_defined_in>
+	<model_id>model2d_576321-a-1</model_id>
+</external_picture>
+
+<external_picture id="id-182">
+	<is_defined_as>
+		<digital_file xsi:nil="true" ref="id-195"/>
+	</is_defined_as>
+	<is_defined_in>
+		<cartesian_coordinate_space_2d xsi:nil="true" ref="id-193"/>
+	</is_defined_in>
+	<model_id>model2d_tool123-1-1</model_id>
+</external_picture>
+
+<external_picture id="id-196">
+	<is_defined_as>
+		<digital_file xsi:nil="true" ref="id-197"/>
+	</is_defined_as>
+	<is_defined_in>
+		<cartesian_coordinate_space_2d xsi:nil="true" ref="id-198"/>
+	</is_defined_in>
+	<model_id>model-678-1-1</model_id>
+</external_picture>
+
+<location id="id-199">
+	<location_id>pos 05</location_id>
+	<location_name>machine x</location_name>
+	<location_type>machine</location_type>
+</location>
+
+<document_assignment id="id-200">
+	<assigned_document>
+		<document_version xsi:nil="true" ref="id-124"/>
+	</assigned_document>
+	<is_assigned_to>
+		<item_definition xsi:nil="true" ref="id-201"/>
+	</is_assigned_to>
+	<role>geometric description</role>
+</document_assignment>
+
+<document_assignment id="id-202">
+	<assigned_document>
+		<document_version xsi:nil="true" ref="id-126"/>
+	</assigned_document>
+	<is_assigned_to>
+		<item_definition xsi:nil="true" ref="id-203"/>
+	</is_assigned_to>
+	<role>geometric description</role>
+</document_assignment>
+
+<document_assignment id="id-204">
+	<assigned_document>
+		<document xsi:nil="true" ref="id-122"/>
+	</assigned_document>
+	<is_assigned_to>
+		<item_definition xsi:nil="true" ref="id-9"/>
+	</is_assigned_to>
+	<role>description</role>
+</document_assignment>
+
+<person id="id-205">
+	<person_name>joe engineer</person_name>
+	<preferred_business_address>somestreet 1, sometown, sweden</preferred_business_address>
+</person>
+
+<document_content_property id="id-206">
+	<detail_level>rounded edges</detail_level>
+	<geometry_type>solid model</geometry_type>
+	<languages>
+		<language xsi:nil="true" ref="id-207"/>
+	</languages>
+</document_content_property>
+
+<fitting_bounds id="id-208">
+	<lower_bound>-0.025</lower_bound>
+	<upper_bound>0</upper_bound>
+	<value_determination>designed</value_determination>
+</fitting_bounds>
+
+<workpiece_feature id="id-8">
+	<Id>123456</Id>
+	<representation>
+		<external_geometric_model xsi:nil="true" ref="id-209"/>
+	</representation>
+</workpiece_feature>
+
+<specific_item_classification id="id-210">
+	<associated_item>
+		<physical_item xsi:nil="true" ref="id-81"/>
+		<physical_item xsi:nil="true" ref="id-211"/>
+		<item xsi:nil="true" ref="id-155"/>
+		<item xsi:nil="true" ref="id-151"/>
+		<item xsi:nil="true" ref="id-159"/>
+		<item xsi:nil="true" ref="id-146"/>
+		<item xsi:nil="true" ref="id-139"/>
+		<item xsi:nil="true" ref="id-144"/>
+		<item xsi:nil="true" ref="id-157"/>
+		<item xsi:nil="true" ref="id-161"/>
+		<item xsi:nil="true" ref="id-153"/>
+		<item xsi:nil="true" ref="id-163"/>
+	</associated_item>
+	<classification_name>tool item</classification_name>
+</specific_item_classification>
+
+<specific_item_classification id="id-212">
+	<associated_item>
+		<item xsi:nil="true" ref="id-155"/>
+		<item xsi:nil="true" ref="id-151"/>
+		<item xsi:nil="true" ref="id-159"/>
+		<item xsi:nil="true" ref="id-139"/>
+		<item xsi:nil="true" ref="id-144"/>
+		<item xsi:nil="true" ref="id-157"/>
+		<item xsi:nil="true" ref="id-142"/>
+		<item xsi:nil="true" ref="id-153"/>
+		<item xsi:nil="true" ref="id-149"/>
+	</associated_item>
+	<classification_name>detail</classification_name>
+</specific_item_classification>
+
+<specific_item_classification id="id-213">
+	<associated_item>
+		<item xsi:nil="true" ref="id-142"/>
+		<physical_item xsi:nil="true" ref="id-214"/>
+	</associated_item>
+	<classification_name>cutting item</classification_name>
+</specific_item_classification>
+
+<specific_item_classification id="id-215">
+	<associated_item>
+		<physical_item xsi:nil="true" ref="id-211"/>
+		<item xsi:nil="true" ref="id-146"/>
+	</associated_item>
+	<classification_name>assembly</classification_name>
+</specific_item_classification>
+
+<specific_item_classification id="id-216">
+	<associated_item>
+		<item xsi:nil="true" ref="id-149"/>
+	</associated_item>
+	<classification_name>assembly item</classification_name>
+</specific_item_classification>
+
+<specific_item_classification id="id-217">
+	<associated_item>
+		<item xsi:nil="true" ref="id-146"/>
+	</associated_item>
+	<classification_name>adaptive item</classification_name>
+</specific_item_classification>
+
+<substrate id="id-170">
+	<name>wc</name>
+</substrate>
+
+<physical_item_version id="id-218">
+	<associated_item>
+		<physical_item xsi:nil="true" ref="id-81"/>
+	</associated_item>
+	<Id>984327-1-a</Id>
+</physical_item_version>
+
+<physical_item_version id="id-219">
+	<associated_item>
+		<physical_item xsi:nil="true" ref="id-214"/>
+	</associated_item>
+	<Id>576321-1-a</Id>
+</physical_item_version>
+
+<physical_item_version id="id-220">
+	<associated_item>
+		<physical_item xsi:nil="true" ref="id-211"/>
+	</associated_item>
+	<Id>tool123-1-a</Id>
+</physical_item_version>
+
+<physical_item_state_association id="id-221">
+	<associated_physical_item>
+		<physical_item_definition xsi:nil="true" ref="id-36"/>
+	</associated_physical_item>
+	<associated_state>
+		<state xsi:nil="true" ref="id-3"/>
+	</associated_state>
+	<role>observed</role>
+</physical_item_state_association>
+
+<person_in_organization id="id-222">
+	<associated_organization>
+		<organization xsi:nil="true" ref="id-0"/>
+	</associated_organization>
+	<associated_person>
+		<person xsi:nil="true" ref="id-205"/>
+	</associated_person>
+	<Id>6702</Id>
+	<location>r139</location>
+	<role>employee</role>
+</person_in_organization>
+
+<date_time id="id-223">
+	<date>2007-01-30</date>
+	<time>hh:mm:ss</time>
+</date_time>
+
+<item_version_relationship id="id-224">
+	<related>
+		<item_version xsi:nil="true" ref="id-225"/>
+	</related>
+	<relating>
+		<item_version xsi:nil="true" ref="id-82"/>
+	</relating>
+	<relation_type>sequence</relation_type>
+</item_version_relationship>
+
+<item_version_relationship id="id-226">
+	<related>
+		<item_version xsi:nil="true" ref="id-227"/>
+	</related>
+	<relating>
+		<item_version xsi:nil="true" ref="id-225"/>
+	</relating>
+	<relation_type>hierarchy</relation_type>
+</item_version_relationship>
+
+<item_version_relationship id="id-228">
+	<related>
+		<item_version xsi:nil="true" ref="id-229"/>
+	</related>
+	<relating>
+		<item_version xsi:nil="true" ref="id-230"/>
+	</relating>
+	<relation_type>derived</relation_type>
+</item_version_relationship>
+
+<item_version_relationship id="id-231">
+	<related>
+		<item_version xsi:nil="true" ref="id-232"/>
+	</related>
+	<relating>
+		<item_version xsi:nil="true" ref="id-233"/>
+	</relating>
+	<relation_type>supplied item</relation_type>
+</item_version_relationship>
+
+<alias_identification id="id-234">
+	<alias_id>cutter_2345</alias_id>
+	<alias_scope>
+		<organization xsi:nil="true" ref="id-0"/>
+	</alias_scope>
+	<is_applied_to>
+		<item xsi:nil="true" ref="id-139"/>
+	</is_applied_to>
+</alias_identification>
+
+<external_library_reference id="id-235">
+	<description>
+		<multi_language_string xsi:nil="true" ref="id-236"/>
+	</description>
+	<external_id>aa001</external_id>
+	<library_type>owl</library_type>
+</external_library_reference>
+
+<external_library_reference id="id-71">
+	<external_id>aa002</external_id>
+	<library_type>owl</library_type>
+</external_library_reference>
+
+<physical_item id="id-81">
+	<Id>984327</Id>
+	<name>
+		<multi_language_string xsi:nil="true" ref="id-237"/>
+	</name>
+</physical_item>
+
+<physical_item id="id-214">
+	<Id>576321</Id>
+	<name>
+		<multi_language_string xsi:nil="true" ref="id-238"/>
+	</name>
+</physical_item>
+
+<physical_item id="id-211">
+	<Id>tool123</Id>
+	<name>
+		<multi_language_string xsi:nil="true" ref="id-238"/>
+	</name>
+</physical_item>
+
+<classification_association id="id-239">
+	<associated_classification>
+		<general_classification xsi:nil="true" ref="id-240"/>
+	</associated_classification>
+	<classified_element>
+		<item_definition xsi:nil="true" ref="id-9"/>
+	</classified_element>
+</classification_association>
+
+<classification_association id="id-241">
+	<associated_classification>
+		<general_classification xsi:nil="true" ref="id-242"/>
+	</associated_classification>
+	<classified_element>
+		<item_definition xsi:nil="true" ref="id-9"/>
+	</classified_element>
+	<defintional>false</defintional>
+</classification_association>
+
+<classification_association id="id-243">
+	<associated_classification>
+		<general_classification xsi:nil="true" ref="id-244"/>
+	</associated_classification>
+	<classified_element>
+		<item_definition xsi:nil="true" ref="id-137"/>
+	</classified_element>
+</classification_association>
+
+<classification_association id="id-245">
+	<associated_classification>
+		<general_classification xsi:nil="true" ref="id-246"/>
+	</associated_classification>
+	<classified_element>
+		<item_definition xsi:nil="true" ref="id-93"/>
+	</classified_element>
+</classification_association>
+
+<classification_association id="id-247">
+	<associated_classification>
+		<general_classification xsi:nil="true" ref="id-248"/>
+	</associated_classification>
+	<classified_element>
+		<item_definition xsi:nil="true" ref="id-96"/>
+	</classified_element>
+</classification_association>
+
+<classification_association id="id-249">
+	<associated_classification>
+		<general_classification xsi:nil="true" ref="id-248"/>
+	</associated_classification>
+	<classified_element>
+		<item_definition xsi:nil="true" ref="id-99"/>
+	</classified_element>
+</classification_association>
+
+<classification_association id="id-250">
+	<associated_classification>
+		<general_classification xsi:nil="true" ref="id-251"/>
+	</associated_classification>
+	<classified_element>
+		<item_definition xsi:nil="true" ref="id-137"/>
+	</classified_element>
+</classification_association>
+
+<classification_association id="id-252">
+	<associated_classification>
+		<general_classification xsi:nil="true" ref="id-246"/>
+	</associated_classification>
+	<classified_element>
+		<item_definition xsi:nil="true" ref="id-93"/>
+	</classified_element>
+	<defintional>false</defintional>
+</classification_association>
+
+<classification_association id="id-253">
+	<associated_classification>
+		<general_classification xsi:nil="true" ref="id-248"/>
+	</associated_classification>
+	<classified_element>
+		<item_definition xsi:nil="true" ref="id-93"/>
+	</classified_element>
+	<defintional>false</defintional>
+</classification_association>
+
+<mating_definition id="id-84">
+	<associated_item_version>
+		<item_version xsi:nil="true" ref="id-254"/>
+	</associated_item_version>
+	<Id>tool123-1-2</Id>
+	<mating_type>bolted joint</mating_type>
+</mating_definition>
+
+<mating_definition id="id-87">
+	<associated_item_version>
+		<item_version xsi:nil="true" ref="id-254"/>
+	</associated_item_version>
+	<Id>tool123-1-3</Id>
+	<mating_type>bolted joint</mating_type>
+</mating_definition>
+
+<external_geometric_model id="id-176">
+	<is_defined_as>
+		<digital_file xsi:nil="true" ref="id-255"/>
+	</is_defined_as>
+	<is_defined_in>
+		<cartesian_coordinate_space_3d xsi:nil="true" ref="id-256"/>
+	</is_defined_in>
+	<model_id>model_984327-a-1</model_id>
+</external_geometric_model>
+
+<external_geometric_model id="id-179">
+	<is_defined_as>
+		<digital_file xsi:nil="true" ref="id-257"/>
+	</is_defined_as>
+	<is_defined_in>
+		<cartesian_coordinate_space_3d xsi:nil="true" ref="id-256"/>
+	</is_defined_in>
+	<model_id>model_576321-a-1</model_id>
+</external_geometric_model>
+
+<external_geometric_model id="id-177">
+	<is_defined_as>
+		<digital_file xsi:nil="true" ref="id-258"/>
+	</is_defined_as>
+	<is_defined_in>
+		<cartesian_coordinate_space_3d xsi:nil="true" ref="id-256"/>
+	</is_defined_in>
+	<model_id>model_123-a-1</model_id>
+</external_geometric_model>
+
+<external_geometric_model id="id-259">
+	<is_defined_as>
+		<digital_file xsi:nil="true" ref="id-260"/>
+	</is_defined_as>
+	<is_defined_in>
+		<cartesian_coordinate_space_3d xsi:nil="true" ref="id-261"/>
+	</is_defined_in>
+	<model_id>model-tool456-1-1</model_id>
+</external_geometric_model>
+
+<external_geometric_model id="id-209">
+	<is_defined_as>
+		<digital_file xsi:nil="true" ref="id-262"/>
+	</is_defined_as>
+	<is_defined_in>
+		<cartesian_coordinate_space_3d xsi:nil="true" ref="id-261"/>
+	</is_defined_in>
+	<model_id>model_123456</model_id>
+	<model_extent>200</model_extent>
+</external_geometric_model>
+
+<physical_item_location_association id="id-263">
+	<located_item>
+		<physical_item xsi:nil="true" ref="id-81"/>
+	</located_item>
+	<location>
+		<location xsi:nil="true" ref="id-199"/>
+	</location>
+</physical_item_location_association>
+
+<document_version_relationship id="id-264">
+	<related>
+		<document_version xsi:nil="true" ref="id-123"/>
+	</related>
+	<relating>
+		<document_version xsi:nil="true" ref="id-121"/>
+	</relating>
+	<relation_type></relation_type>
+</document_version_relationship>
+
+<direction id="id-265">
+	<direction_ratios></direction_ratios>
+</direction>
+
+<direction id="id-266">
+	<direction_ratios></direction_ratios>
+</direction>
+
+<direction id="id-267">
+	<direction_ratios></direction_ratios>
+</direction>
+
+<direction id="id-268">
+	<direction_ratios></direction_ratios>
+</direction>
+
+<plus_minus_bounds id="id-269">
+	<lower_bound>0.1</lower_bound>
+	<upper_bound>0.05</upper_bound>
+	<value_determination>designed</value_determination>
+</plus_minus_bounds>
+
+<property_value_representation_relationship id="id-270">
+	<related>
+		<property_value_representation xsi:nil="true" ref="id-120"/>
+	</related>
+	<relating>
+		<property_value_representation xsi:nil="true" ref="id-118"/>
+	</relating>
+	<relation_type>dependency</relation_type>
+</property_value_representation_relationship>
+
+<item_instance id="id-18">
+	<definition>
+		<item_definition xsi:nil="true" ref="id-9"/>
+	</definition>
+	<description>
+		<multi_language_string xsi:nil="true" ref="id-271"/>
+	</description>
+	<Id>984327-1-a-1-1</Id>
+</item_instance>
+
+<item_instance id="id-21">
+	<definition>
+		<item_definition xsi:nil="true" ref="id-6"/>
+	</definition>
+	<description>
+		<multi_language_string xsi:nil="true" ref="id-272"/>
+	</description>
+	<Id>576321-1-b-1-1</Id>
+</item_instance>
+
+<item_instance id="id-24">
+	<definition>
+		<item_definition xsi:nil="true" ref="id-6"/>
+	</definition>
+	<description>
+		<multi_language_string xsi:nil="true" ref="id-273"/>
+	</description>
+	<Id>576321-1-b-1-2</Id>
+</item_instance>
+
+<item_instance id="id-26">
+	<definition>
+		<item_definition xsi:nil="true" ref="id-274"/>
+	</definition>
+	<description>
+		<multi_language_string xsi:nil="true" ref="id-275"/>
+	</description>
+	<Id>8327-1-1-1</Id>
+</item_instance>
+
+<item_instance id="id-28">
+	<definition>
+		<item_definition xsi:nil="true" ref="id-274"/>
+	</definition>
+	<description>
+		<multi_language_string xsi:nil="true" ref="id-276"/>
+	</description>
+	<Id>8327-1-1-2</Id>
+</item_instance>
+
+<item_instance id="id-31">
+	<definition>
+		<item_definition xsi:nil="true" ref="id-9"/>
+	</definition>
+	<Id>984327-1-a-1-1</Id>
+</item_instance>
+
+<item_instance id="id-34">
+	<definition>
+		<item_definition xsi:nil="true" ref="id-6"/>
+	</definition>
+	<Id>576321-1-b-1-2</Id>
+</item_instance>
+
+<plib_class_reference id="id-41">
+	<code>71e01a05d27a8</code>
+	<supplier_bsu>0112/1///13399__001</supplier_bsu>
+	<version>001</version>
+</plib_class_reference>
+
+<plib_class_reference id="id-43">
+	<code>71e01a05d27a8</code>
+	<supplier_bsu>112/1///13399__001</supplier_bsu>
+	<version>001</version>
+</plib_class_reference>
+
+<plib_class_reference id="id-45">
+	<code>71e01a0e9cba9</code>
+	<supplier_bsu>112/1///13399__001</supplier_bsu>
+	<version>001</version>
+</plib_class_reference>
+
+<plib_class_reference id="id-51">
+	<code>71ead37f18f34</code>
+	<supplier_bsu>0112/1///13399__001</supplier_bsu>
+	<version>001</version>
+</plib_class_reference>
+
+<limits_and_fits id="id-277">
+	<deviation>h7</deviation>
+	<fitting_type>shaft</fitting_type>
+	<grade>it8</grade>
+</limits_and_fits>
+
+<cartesian_point id="id-278">
+	<coordinates></coordinates>
+</cartesian_point>
+
+<cartesian_point id="id-279">
+	<coordinates></coordinates>
+</cartesian_point>
+
+<cartesian_point id="id-280">
+	<coordinates></coordinates>
+</cartesian_point>
+
+<cartesian_point id="id-281">
+	<coordinates></coordinates>
+</cartesian_point>
+
+<physical_item_definition id="id-36">
+	<associated_item_version>
+		<physical_item_version xsi:nil="true" ref="id-218"/>
+	</associated_item_version>
+	<Id>984327-1-a-1</Id>
+</physical_item_definition>
+
+<physical_item_definition id="id-39">
+	<associated_item_version>
+		<physical_item_version xsi:nil="true" ref="id-219"/>
+	</associated_item_version>
+	<Id>576321-1-a-1</Id>
+</physical_item_definition>
+
+<physical_item_definition id="id-37">
+	<associated_item_version>
+		<physical_item_version xsi:nil="true" ref="id-220"/>
+	</associated_item_version>
+	<Id>tool123-1-a-1</Id>
+</physical_item_definition>
+
+<string_with_language id="id-282">
+	<contents>milling tool</contents>
+	<language_specification>
+		<language xsi:nil="true" ref="id-207"/>
+	</language_specification>
+</string_with_language>
+
+<string_with_language id="id-283">
+	<contents>fr&#228;sverktyg</contents>
+	<language_specification>
+		<language xsi:nil="true" ref="id-284"/>
+	</language_specification>
+</string_with_language>
+
+<string_with_language id="id-285">
+	<contents>insert screw</contents>
+	<language_specification>
+		<language xsi:nil="true" ref="id-207"/>
+	</language_specification>
+</string_with_language>
+
+<string_with_language id="id-286">
+	<contents>r390</contents>
+	<language_specification>
+		<language xsi:nil="true" ref="id-207"/>
+	</language_specification>
+</string_with_language>
+
+<string_with_language id="id-287">
+	<contents>r390 insert</contents>
+	<language_specification>
+		<language xsi:nil="true" ref="id-207"/>
+	</language_specification>
+</string_with_language>
+
+<string_with_language id="id-288">
+	<contents>class of tools used for milling</contents>
+	<language_specification>
+		<language xsi:nil="true" ref="id-207"/>
+	</language_specification>
+</string_with_language>
+
+<string_with_language id="id-289">
+	<contents>&quot;milling tool&quot; according to x</contents>
+	<language_specification>
+		<language xsi:nil="true" ref="id-207"/>
+	</language_specification>
+</string_with_language>
+
+<string_with_language id="id-290">
+	<contents>instance of r390 tool body</contents>
+	<language_specification>
+		<language xsi:nil="true" ref="id-207"/>
+	</language_specification>
+</string_with_language>
+
+<string_with_language id="id-291">
+	<contents>instance 2 of r390 insert</contents>
+	<language_specification>
+		<language xsi:nil="true" ref="id-207"/>
+	</language_specification>
+</string_with_language>
+
+<string_with_language id="id-292">
+	<contents>instance 1 of r390 insert</contents>
+	<language_specification>
+		<language xsi:nil="true" ref="id-207"/>
+	</language_specification>
+</string_with_language>
+
+<string_with_language id="id-293">
+	<contents>instance 1 of insert screw</contents>
+	<language_specification>
+		<language xsi:nil="true" ref="id-207"/>
+	</language_specification>
+</string_with_language>
+
+<string_with_language id="id-294">
+	<contents>instance 2 of insert screw</contents>
+	<language_specification>
+		<language xsi:nil="true" ref="id-207"/>
+	</language_specification>
+</string_with_language>
+
+<string_with_language id="id-295">
+	<contents>tool a</contents>
+	<language_specification>
+		<language xsi:nil="true" ref="id-207"/>
+	</language_specification>
+</string_with_language>
+
+<string_with_language id="id-296">
+	<contents>tool b</contents>
+	<language_specification>
+		<language xsi:nil="true" ref="id-207"/>
+	</language_specification>
+</string_with_language>
+
+<string_with_language id="id-297">
+	<contents>r390 mill</contents>
+	<language_specification>
+		<language xsi:nil="true" ref="id-207"/>
+	</language_specification>
+</string_with_language>
+
+<string_with_language id="id-298">
+	<contents>mill 1-14</contents>
+	<language_specification>
+		<language xsi:nil="true" ref="id-207"/>
+	</language_specification>
+</string_with_language>
+
+<string_with_language id="id-299">
+	<contents>mill a123</contents>
+	<language_specification>
+		<language xsi:nil="true" ref="id-207"/>
+	</language_specification>
+</string_with_language>
+
+<string_with_language id="id-300">
+	<contents>cutter 1</contents>
+	<language_specification>
+		<language xsi:nil="true" ref="id-207"/>
+	</language_specification>
+</string_with_language>
+
+<string_with_language id="id-301">
+	<contents>complete assembled tool</contents>
+	<language_specification>
+		<language xsi:nil="true" ref="id-207"/>
+	</language_specification>
+</string_with_language>
+
+<string_with_language id="id-302">
+	<contents>multi purpose tool</contents>
+	<language_specification>
+		<language xsi:nil="true" ref="id-207"/>
+	</language_specification>
+</string_with_language>
+
+<string_with_language id="id-303">
+	<contents>szd016002m0int</contents>
+	<language_specification>
+		<language xsi:nil="true" ref="id-207"/>
+	</language_specification>
+</string_with_language>
+
+<string_with_language id="id-304">
+	<contents>a company unique property</contents>
+	<language_specification>
+		<language xsi:nil="true" ref="id-207"/>
+	</language_specification>
+</string_with_language>
+
+<string_with_language id="id-305">
+	<contents>a new version of a company unique property</contents>
+	<language_specification>
+		<language xsi:nil="true" ref="id-207"/>
+	</language_specification>
+</string_with_language>
+
+<string_with_language id="id-306">
+	<contents>a company unique classification</contents>
+	<language_specification>
+		<language xsi:nil="true" ref="id-207"/>
+	</language_specification>
+</string_with_language>
+
+<string_with_language id="id-307">
+	<contents>physical item of r390 tool body</contents>
+	<language_specification>
+		<language xsi:nil="true" ref="id-207"/>
+	</language_specification>
+</string_with_language>
+
+<string_with_language id="id-308">
+	<contents>physical item of r390 insert</contents>
+	<language_specification>
+		<language xsi:nil="true" ref="id-207"/>
+	</language_specification>
+</string_with_language>
+
+<string_with_language id="id-309">
+	<contents>r390 geometric description</contents>
+	<language_specification>
+		<language xsi:nil="true" ref="id-207"/>
+	</language_specification>
+</string_with_language>
+
+<string_with_language id="id-310">
+	<contents>multi function tool</contents>
+	<language_specification>
+		<language xsi:nil="true" ref="id-207"/>
+	</language_specification>
+</string_with_language>
+
+<string_with_language id="id-311">
+	<contents>tool</contents>
+	<language_specification>
+		<language xsi:nil="true" ref="id-207"/>
+	</language_specification>
+</string_with_language>
+
+<string_with_language id="id-312">
+	<contents></contents>
+	<language_specification>
+		<language xsi:nil="true" ref="id-207"/>
+	</language_specification>
+</string_with_language>
+
+<string_with_language id="id-313">
+	<contents>tool</contents>
+	<language_specification>
+		<language xsi:nil="true" ref="id-207"/>
+	</language_specification>
+</string_with_language>
+
+<string_with_language id="id-314">
+	<contents></contents>
+	<language_specification>
+		<language xsi:nil="true" ref="id-207"/>
+	</language_specification>
+</string_with_language>
+
+<string_with_language id="id-315">
+	<contents>machine side</contents>
+	<language_specification>
+		<language xsi:nil="true" ref="id-207"/>
+	</language_specification>
+</string_with_language>
+
+<cartesian_coordinate_space_3d id="id-256">
+	<unit_of_values>
+		<unit xsi:nil="true" ref="id-14"/>
+		<unit xsi:nil="true" ref="id-15"/>
+	</unit_of_values>
+</cartesian_coordinate_space_3d>
+
+<cartesian_coordinate_space_3d id="id-261">
+	<unit_of_values>
+		<unit xsi:nil="true" ref="id-14"/>
+		<unit xsi:nil="true" ref="id-15"/>
+	</unit_of_values>
+</cartesian_coordinate_space_3d>
+
+<cartesian_coordinate_space_2d id="id-193">
+	<unit_of_values>
+		<unit xsi:nil="true" ref="id-14"/>
+		<unit xsi:nil="true" ref="id-15"/>
+	</unit_of_values>
+</cartesian_coordinate_space_2d>
+
+<cartesian_coordinate_space_2d id="id-198">
+	<unit_of_values>
+		<unit xsi:nil="true" ref="id-14"/>
+		<unit xsi:nil="true" ref="id-15"/>
+	</unit_of_values>
+</cartesian_coordinate_space_2d>
+
+<property_value_representation id="id-91">
+	<definition>
+		<property xsi:nil="true" ref="id-64"/>
+	</definition>
+	<specified_value>
+		<numerical_value xsi:nil="true" ref="id-54"/>
+	</specified_value>
+</property_value_representation>
+
+<property_value_representation id="id-94">
+	<definition>
+		<property xsi:nil="true" ref="id-65"/>
+	</definition>
+	<specified_value>
+		<numerical_value xsi:nil="true" ref="id-55"/>
+	</specified_value>
+</property_value_representation>
+
+<property_value_representation id="id-97">
+	<definition>
+		<property xsi:nil="true" ref="id-66"/>
+	</definition>
+	<specified_value>
+		<numerical_value xsi:nil="true" ref="id-57"/>
+	</specified_value>
+</property_value_representation>
+
+<property_value_representation id="id-100">
+	<definition>
+		<property xsi:nil="true" ref="id-66"/>
+	</definition>
+	<specified_value>
+		<numerical_value xsi:nil="true" ref="id-56"/>
+	</specified_value>
+</property_value_representation>
+
+<property_value_representation id="id-102">
+	<definition>
+		<property xsi:nil="true" ref="id-67"/>
+	</definition>
+	<specified_value>
+		<value_range xsi:nil="true" ref="id-316"/>
+	</specified_value>
+</property_value_representation>
+
+<property_value_representation id="id-104">
+	<definition>
+		<property xsi:nil="true" ref="id-68"/>
+	</definition>
+	<specified_value>
+		<value_limit xsi:nil="true" ref="id-173"/>
+	</specified_value>
+</property_value_representation>
+
+<property_value_representation id="id-106">
+	<definition>
+		<property xsi:nil="true" ref="id-69"/>
+	</definition>
+	<specified_value>
+		<string_value xsi:nil="true" ref="id-10"/>
+	</specified_value>
+</property_value_representation>
+
+<property_value_representation id="id-108">
+	<definition>
+		<property xsi:nil="true" ref="id-70"/>
+	</definition>
+</property_value_representation>
+
+<property_value_representation id="id-110">
+	<definition>
+		<property xsi:nil="true" ref="id-72"/>
+	</definition>
+</property_value_representation>
+
+<property_value_representation id="id-112">
+	<definition>
+		<property xsi:nil="true" ref="id-78"/>
+	</definition>
+	<specified_value>
+		<numerical_value xsi:nil="true" ref="id-58"/>
+	</specified_value>
+</property_value_representation>
+
+<property_value_representation id="id-114">
+	<definition>
+		<property xsi:nil="true" ref="id-79"/>
+	</definition>
+	<specified_value>
+		<numerical_value xsi:nil="true" ref="id-61"/>
+	</specified_value>
+</property_value_representation>
+
+<property_value_representation id="id-116">
+	<definition>
+		<property xsi:nil="true" ref="id-77"/>
+	</definition>
+	<specified_value>
+		<numerical_value xsi:nil="true" ref="id-62"/>
+	</specified_value>
+</property_value_representation>
+
+<property_value_representation id="id-118">
+	<definition>
+		<property xsi:nil="true" ref="id-76"/>
+	</definition>
+	<specified_value>
+		<string_value xsi:nil="true" ref="id-12"/>
+	</specified_value>
+</property_value_representation>
+
+<property_value_representation id="id-120">
+	<definition>
+		<property xsi:nil="true" ref="id-77"/>
+	</definition>
+	<specified_value>
+		<numerical_value xsi:nil="true" ref="id-63"/>
+	</specified_value>
+</property_value_representation>
+
+<digital_file id="id-255">
+	<content>
+		<document_content_property xsi:nil="true" ref="id-206"/>
+	</content>
+	<creation>
+		<document_creation_property xsi:nil="true" ref="id-89"/>
+	</creation>
+	<external_id_and_location>
+		<external_file_id_and_location xsi:nil="true" ref="id-187"/>
+	</external_id_and_location>
+	<file_format>
+		<document_format_property xsi:nil="true" ref="id-174"/>
+	</file_format>
+	<file_id>/ignore</file_id>
+</digital_file>
+
+<digital_file id="id-257">
+	<external_id_and_location></external_id_and_location>
+	<file_id>file_576321-a-1</file_id>
+</digital_file>
+
+<digital_file id="id-258">
+	<external_id_and_location>
+		<external_file_id_and_location xsi:nil="true" ref="id-190"/>
+	</external_id_and_location>
+	<file_id>/ignore</file_id>
+</digital_file>
+
+<digital_file id="id-192">
+	<external_id_and_location></external_id_and_location>
+	<file_id>file2d_984327-a-1</file_id>
+</digital_file>
+
+<digital_file id="id-194">
+	<external_id_and_location></external_id_and_location>
+	<file_id>file2d_576321-a-1</file_id>
+</digital_file>
+
+<digital_file id="id-195">
+	<external_id_and_location>
+		<external_file_id_and_location xsi:nil="true" ref="id-191"/>
+	</external_id_and_location>
+	<file_id>/ignore</file_id>
+</digital_file>
+
+<digital_file id="id-260">
+	<external_id_and_location>
+		<external_file_id_and_location xsi:nil="true" ref="id-188"/>
+	</external_id_and_location>
+	<file_id>/ignore</file_id>
+	<version_id>001</version_id>
+</digital_file>
+
+<digital_file id="id-197">
+	<external_id_and_location>
+		<external_file_id_and_location xsi:nil="true" ref="id-189"/>
+	</external_id_and_location>
+	<file_id>/ignore</file_id>
+	<version_id>001</version_id>
+</digital_file>
+
+<digital_file id="id-262">
+	<external_id_and_location></external_id_and_location>
+	<file_id>file_model_123456</file_id>
+	<version_id>001</version_id>
+</digital_file>
+
+<cutting_condition id="id-169">
+	<condition_name>p25</condition_name>
+</cutting_condition>
+
+<transformation_3d id="id-175">
+	<axis_1>
+		<direction xsi:nil="true" ref="id-265"/>
+	</axis_1>
+	<local_origin>
+		<cartesian_point xsi:nil="true" ref="id-278"/>
+	</local_origin>
+</transformation_3d>
+
+<transformation_3d id="id-178">
+	<axis_1>
+		<direction xsi:nil="true" ref="id-266"/>
+	</axis_1>
+	<local_origin>
+		<cartesian_point xsi:nil="true" ref="id-279"/>
+	</local_origin>
+</transformation_3d>
+
+<general_classification id="id-240">
+	<description>
+		<multi_language_string xsi:nil="true" ref="id-317"/>
+	</description>
+	<Id>milling tool</Id>
+</general_classification>
+
+<general_classification id="id-242">
+	<classification_source>
+		<plib_class_reference xsi:nil="true" ref="id-41"/>
+	</classification_source>
+	<description>
+<default_language_string-wrapper>/ignore</default_language_string-wrapper>
+</description>
+	<Id>/ignore</Id>
+	<version_id>/ignore</version_id>
+</general_classification>
+
+<general_classification id="id-244">
+	<classification_source>
+		<external_library_reference xsi:nil="true" ref="id-235"/>
+	</classification_source>
+	<description>
+<default_language_string-wrapper>/ignore</default_language_string-wrapper>
+</description>
+	<Id>/ignore</Id>
+	<version_id>/ignore</version_id>
+</general_classification>
+
+<general_classification id="id-246">
+	<classification_source>
+		<plib_class_reference xsi:nil="true" ref="id-43"/>
+	</classification_source>
+	<description>
+<default_language_string-wrapper>/ignore</default_language_string-wrapper>
+</description>
+	<Id>/ignore</Id>
+	<version_id>/ignore</version_id>
+</general_classification>
+
+<general_classification id="id-248">
+	<classification_source>
+		<plib_class_reference xsi:nil="true" ref="id-45"/>
+	</classification_source>
+	<description>
+<default_language_string-wrapper>/ignore</default_language_string-wrapper>
+</description>
+	<Id>/ignore</Id>
+	<version_id>/ignore</version_id>
+</general_classification>
+
+<general_classification id="id-251">
+	<description>
+		<multi_language_string xsi:nil="true" ref="id-318"/>
+	</description>
+	<Id>class001</Id>
+	<version_id>001</version_id>
+</general_classification>
+
+<transformation_2d id="id-180">
+	<axis_1>
+		<direction xsi:nil="true" ref="id-267"/>
+	</axis_1>
+	<local_origin>
+		<cartesian_point xsi:nil="true" ref="id-280"/>
+	</local_origin>
+</transformation_2d>
+
+<transformation_2d id="id-183">
+	<axis_1>
+		<direction xsi:nil="true" ref="id-268"/>
+	</axis_1>
+	<local_origin>
+		<cartesian_point xsi:nil="true" ref="id-281"/>
+	</local_origin>
+</transformation_2d>
+
+<value_list id="id-319">
+	<value_name>a name of the list</value_name>
+	<values>
+		<numerical_value xsi:nil="true" ref="id-58"/>
+		<numerical_value xsi:nil="true" ref="id-59"/>
+		<numerical_value xsi:nil="true" ref="id-60"/>
+	</values>
+</value_list>
+
+<assembly_definition id="id-19">
+	<associated_item_version>
+		<item_version xsi:nil="true" ref="id-254"/>
+	</associated_item_version>
+	<Id>tool123-1-1</Id>
+	<assembly_type>design assembly</assembly_type>
+</assembly_definition>
+
+<item_definition id="id-9">
+	<associated_item_version>
+		<item_version xsi:nil="true" ref="id-82"/>
+	</associated_item_version>
+	<Id>984327-1-a-1</Id>
+</item_definition>
+
+<item_definition id="id-6">
+	<associated_item_version>
+		<item_version xsi:nil="true" ref="id-132"/>
+	</associated_item_version>
+	<Id>576321-1-b-1</Id>
+</item_definition>
+
+<item_definition id="id-137">
+	<associated_item_version>
+		<item_version xsi:nil="true" ref="id-320"/>
+	</associated_item_version>
+	<Id>63214871-1-1</Id>
+</item_definition>
+
+<item_definition id="id-274">
+	<associated_item_version>
+		<item_version xsi:nil="true" ref="id-321"/>
+	</associated_item_version>
+	<Id>8327-1-1</Id>
+</item_definition>
+
+<item_definition id="id-322">
+	<associated_item_version>
+		<item_version xsi:nil="true" ref="id-233"/>
+	</associated_item_version>
+	<Id>29843435.1-1</Id>
+</item_definition>
+
+<item_definition id="id-323">
+	<associated_item_version>
+		<item_version xsi:nil="true" ref="id-232"/>
+	</associated_item_version>
+	<Id>a54b67-a.1</Id>
+</item_definition>
+
+<item_definition id="id-324">
+	<associated_item_version>
+		<item_version xsi:nil="true" ref="id-230"/>
+	</associated_item_version>
+	<Id>765432-1-1</Id>
+</item_definition>
+
+<item_definition id="id-325">
+	<associated_item_version>
+		<item_version xsi:nil="true" ref="id-229"/>
+	</associated_item_version>
+	<Id>765433-1-1</Id>
+</item_definition>
+
+<item_definition id="id-93">
+	<associated_item_version>
+		<item_version xsi:nil="true" ref="id-326"/>
+	</associated_item_version>
+	<Id>12345-678-1-1</Id>
+</item_definition>
+
+<item_definition id="id-96">
+	<associated_item_version>
+		<item_version xsi:nil="true" ref="id-326"/>
+	</associated_item_version>
+	<Id>12346-678-1-2</Id>
+</item_definition>
+
+<item_definition id="id-99">
+	<associated_item_version>
+		<item_version xsi:nil="true" ref="id-326"/>
+	</associated_item_version>
+	<Id>12346-678-1-3</Id>
+</item_definition>
+
+<item_definition id="id-201">
+	<associated_item_version>
+		<item_version xsi:nil="true" ref="id-327"/>
+	</associated_item_version>
+	<Id>tool456-1-1</Id>
+</item_definition>
+
+<item_definition id="id-203">
+	<associated_item_version>
+		<item_version xsi:nil="true" ref="id-328"/>
+	</associated_item_version>
+	<Id>tool678-1-1</Id>
+</item_definition>
+
+<item_definition id="id-329">
+	<Id>tool001-1-1</Id>
+</item_definition>
+
+<value_limitation id="id-330">
+	<is_defined_by>
+		<plus_minus_bounds xsi:nil="true" ref="id-269"/>
+	</is_defined_by>
+	<limited_value>
+		<numerical_value xsi:nil="true" ref="id-61"/>
+	</limited_value>
+</value_limitation>
+
+<value_limitation id="id-331">
+	<is_defined_by>
+		<limits_and_fits xsi:nil="true" ref="id-277"/>
+	</is_defined_by>
+	<limited_value>
+		<numerical_value xsi:nil="true" ref="id-62"/>
+	</limited_value>
+</value_limitation>
+
+<value_limitation id="id-332">
+	<is_defined_by>
+		<fitting_bounds xsi:nil="true" ref="id-208"/>
+	</is_defined_by>
+	<limited_value>
+		<numerical_value xsi:nil="true" ref="id-62"/>
+	</limited_value>
+</value_limitation>
+
+<coating id="id-168">
+	<coating_name>tialn</coating_name>
+	<coating_process>pvd</coating_process>
+</coating>
+
+<classification_association_relationship id="id-333">
+	<related>
+		<classification_association xsi:nil="true" ref="id-253"/>
+	</related>
+	<relating>
+		<classification_association xsi:nil="true" ref="id-252"/>
+	</relating>
+	<relationship_type>alternitive</relationship_type>
+</classification_association_relationship>
+
+<person_organization_assignment id="id-334">
+	<assigned_person_organization>
+		<person_in_organization xsi:nil="true" ref="id-222"/>
+	</assigned_person_organization>
+	<is_applied_to>
+		<item xsi:nil="true" ref="id-139"/>
+	</is_applied_to>
+	<role>creator</role>
+</person_organization_assignment>
+
+<person_organization_assignment id="id-335">
+	<assigned_person_organization>
+		<organization xsi:nil="true" ref="id-0"/>
+	</assigned_person_organization>
+	<is_applied_to>
+		<physical_item xsi:nil="true" ref="id-81"/>
+		<item xsi:nil="true" ref="id-155"/>
+		<item xsi:nil="true" ref="id-151"/>
+		<item xsi:nil="true" ref="id-159"/>
+		<item xsi:nil="true" ref="id-146"/>
+		<item xsi:nil="true" ref="id-139"/>
+		<item xsi:nil="true" ref="id-144"/>
+		<item xsi:nil="true" ref="id-157"/>
+		<item xsi:nil="true" ref="id-142"/>
+		<item xsi:nil="true" ref="id-161"/>
+		<item xsi:nil="true" ref="id-149"/>
+		<item xsi:nil="true" ref="id-163"/>
+	</is_applied_to>
+	<role>id owner</role>
+</person_organization_assignment>
+
+<person_organization_assignment id="id-336">
+	<assigned_person_organization>
+		<organization xsi:nil="true" ref="id-1"/>
+	</assigned_person_organization>
+	<is_applied_to>
+		<item xsi:nil="true" ref="id-144"/>
+	</is_applied_to>
+	<role>id owner</role>
+</person_organization_assignment>
+
+<person_organization_assignment id="id-337">
+	<assigned_person_organization>
+		<organization xsi:nil="true" ref="id-2"/>
+	</assigned_person_organization>
+	<is_applied_to>
+		<item xsi:nil="true" ref="id-153"/>
+	</is_applied_to>
+	<role>id owner</role>
+</person_organization_assignment>
+
+<person_organization_assignment id="id-338">
+	<assigned_person_organization>
+		<organization xsi:nil="true" ref="id-0"/>
+	</assigned_person_organization>
+	<is_applied_to>
+		<classification_association xsi:nil="true" ref="id-252"/>
+	</is_applied_to>
+	<role>classification officer</role>
+</person_organization_assignment>
+
+<person_organization_assignment id="id-339">
+	<assigned_person_organization>
+		<organization xsi:nil="true" ref="id-0"/>
+	</assigned_person_organization>
+	<is_applied_to>
+		<item xsi:nil="true" ref="id-139"/>
+	</is_applied_to>
+	<role>luser</role>
+</person_organization_assignment>
+
+<mated_item_relationship id="id-340">
+	<mating_material>
+		<item_instance xsi:nil="true" ref="id-26"/>
+	</mating_material>
+	<related>
+		<mating_association xsi:nil="true" ref="id-85"/>
+	</related>
+	<relating>
+		<mating_association xsi:nil="true" ref="id-83"/>
+	</relating>
+</mated_item_relationship>
+
+<mated_item_relationship id="id-341">
+	<mating_material>
+		<item_instance xsi:nil="true" ref="id-28"/>
+	</mating_material>
+	<related>
+		<mating_association xsi:nil="true" ref="id-88"/>
+	</related>
+	<relating>
+		<mating_association xsi:nil="true" ref="id-86"/>
+	</relating>
+</mated_item_relationship>
+
+<effectivity id="id-129">
+	<concerned_organization>
+		<organization xsi:nil="true" ref="id-0"/>
+	</concerned_organization>
+	<period>
+		<duration xsi:nil="true" ref="id-134"/>
+	</period>
+	<start_definition>
+		<date_time xsi:nil="true" ref="id-223"/>
+	</start_definition>
+</effectivity>
+
+<effectivity id="id-131">
+	<concerned_organization></concerned_organization>
+</effectivity>
+
+<multi_language_string id="id-140">
+	<additional_language_string>
+		<string_with_language xsi:nil="true" ref="id-283"/>
+	</additional_language_string>
+	<primary_language_string>
+		<string_with_language xsi:nil="true" ref="id-282"/>
+	</primary_language_string>
+</multi_language_string>
+
+<multi_language_string id="id-150">
+	<additional_language_string></additional_language_string>
+	<primary_language_string>
+		<string_with_language xsi:nil="true" ref="id-285"/>
+	</primary_language_string>
+</multi_language_string>
+
+<multi_language_string id="id-141">
+	<additional_language_string></additional_language_string>
+	<primary_language_string>
+		<string_with_language xsi:nil="true" ref="id-286"/>
+	</primary_language_string>
+</multi_language_string>
+
+<multi_language_string id="id-143">
+	<additional_language_string></additional_language_string>
+	<primary_language_string>
+		<string_with_language xsi:nil="true" ref="id-287"/>
+	</primary_language_string>
+</multi_language_string>
+
+<multi_language_string id="id-317">
+	<additional_language_string></additional_language_string>
+	<primary_language_string>
+		<string_with_language xsi:nil="true" ref="id-288"/>
+	</primary_language_string>
+</multi_language_string>
+
+<multi_language_string id="id-236">
+	<additional_language_string></additional_language_string>
+	<primary_language_string>
+		<string_with_language xsi:nil="true" ref="id-289"/>
+	</primary_language_string>
+</multi_language_string>
+
+<multi_language_string id="id-271">
+	<additional_language_string></additional_language_string>
+	<primary_language_string>
+		<string_with_language xsi:nil="true" ref="id-290"/>
+	</primary_language_string>
+</multi_language_string>
+
+<multi_language_string id="id-273">
+	<additional_language_string></additional_language_string>
+	<primary_language_string>
+		<string_with_language xsi:nil="true" ref="id-291"/>
+	</primary_language_string>
+</multi_language_string>
+
+<multi_language_string id="id-272">
+	<additional_language_string></additional_language_string>
+	<primary_language_string>
+		<string_with_language xsi:nil="true" ref="id-292"/>
+	</primary_language_string>
+</multi_language_string>
+
+<multi_language_string id="id-276">
+	<additional_language_string></additional_language_string>
+	<primary_language_string>
+		<string_with_language xsi:nil="true" ref="id-294"/>
+	</primary_language_string>
+</multi_language_string>
+
+<multi_language_string id="id-275">
+	<additional_language_string></additional_language_string>
+	<primary_language_string>
+		<string_with_language xsi:nil="true" ref="id-293"/>
+	</primary_language_string>
+</multi_language_string>
+
+<multi_language_string id="id-156">
+	<additional_language_string></additional_language_string>
+	<primary_language_string>
+		<string_with_language xsi:nil="true" ref="id-295"/>
+	</primary_language_string>
+</multi_language_string>
+
+<multi_language_string id="id-158">
+	<additional_language_string></additional_language_string>
+	<primary_language_string>
+		<string_with_language xsi:nil="true" ref="id-296"/>
+	</primary_language_string>
+</multi_language_string>
+
+<multi_language_string id="id-148">
+	<additional_language_string></additional_language_string>
+	<primary_language_string>
+		<string_with_language xsi:nil="true" ref="id-297"/>
+	</primary_language_string>
+</multi_language_string>
+
+<multi_language_string id="id-145">
+	<additional_language_string></additional_language_string>
+	<primary_language_string>
+		<string_with_language xsi:nil="true" ref="id-298"/>
+	</primary_language_string>
+</multi_language_string>
+
+<multi_language_string id="id-152">
+	<additional_language_string></additional_language_string>
+	<primary_language_string>
+		<string_with_language xsi:nil="true" ref="id-299"/>
+	</primary_language_string>
+</multi_language_string>
+
+<multi_language_string id="id-154">
+	<additional_language_string></additional_language_string>
+	<primary_language_string>
+		<string_with_language xsi:nil="true" ref="id-300"/>
+	</primary_language_string>
+</multi_language_string>
+
+<multi_language_string id="id-147">
+	<additional_language_string></additional_language_string>
+	<primary_language_string>
+		<string_with_language xsi:nil="true" ref="id-301"/>
+	</primary_language_string>
+</multi_language_string>
+
+<multi_language_string id="id-160">
+	<additional_language_string></additional_language_string>
+	<primary_language_string>
+		<string_with_language xsi:nil="true" ref="id-302"/>
+	</primary_language_string>
+</multi_language_string>
+
+<multi_language_string id="id-11">
+	<additional_language_string></additional_language_string>
+	<primary_language_string>
+		<string_with_language xsi:nil="true" ref="id-303"/>
+	</primary_language_string>
+</multi_language_string>
+
+<multi_language_string id="id-73">
+	<additional_language_string></additional_language_string>
+	<primary_language_string>
+		<string_with_language xsi:nil="true" ref="id-304"/>
+	</primary_language_string>
+</multi_language_string>
+
+<multi_language_string id="id-75">
+	<additional_language_string></additional_language_string>
+	<primary_language_string>
+		<string_with_language xsi:nil="true" ref="id-305"/>
+	</primary_language_string>
+</multi_language_string>
+
+<multi_language_string id="id-318">
+	<additional_language_string></additional_language_string>
+	<primary_language_string>
+		<string_with_language xsi:nil="true" ref="id-306"/>
+	</primary_language_string>
+</multi_language_string>
+
+<multi_language_string id="id-237">
+	<additional_language_string></additional_language_string>
+	<primary_language_string>
+		<string_with_language xsi:nil="true" ref="id-307"/>
+	</primary_language_string>
+</multi_language_string>
+
+<multi_language_string id="id-238">
+	<additional_language_string></additional_language_string>
+	<primary_language_string>
+		<string_with_language xsi:nil="true" ref="id-308"/>
+	</primary_language_string>
+</multi_language_string>
+
+<multi_language_string id="id-165">
+	<additional_language_string></additional_language_string>
+	<primary_language_string>
+		<string_with_language xsi:nil="true" ref="id-309"/>
+	</primary_language_string>
+</multi_language_string>
+
+<multi_language_string id="id-342">
+	<additional_language_string></additional_language_string>
+	<primary_language_string>
+		<string_with_language xsi:nil="true" ref="id-310"/>
+	</primary_language_string>
+</multi_language_string>
+
+<multi_language_string id="id-162">
+	<additional_language_string></additional_language_string>
+	<primary_language_string>
+		<string_with_language xsi:nil="true" ref="id-311"/>
+	</primary_language_string>
+</multi_language_string>
+
+<multi_language_string id="id-167">
+	<additional_language_string></additional_language_string>
+	<primary_language_string>
+		<string_with_language xsi:nil="true" ref="id-312"/>
+	</primary_language_string>
+</multi_language_string>
+
+<multi_language_string id="id-164">
+	<additional_language_string></additional_language_string>
+	<primary_language_string>
+		<string_with_language xsi:nil="true" ref="id-313"/>
+	</primary_language_string>
+</multi_language_string>
+
+<multi_language_string id="id-166">
+	<additional_language_string></additional_language_string>
+	<primary_language_string>
+		<string_with_language xsi:nil="true" ref="id-314"/>
+	</primary_language_string>
+</multi_language_string>
+
+<multi_language_string id="id-13">
+	<additional_language_string></additional_language_string>
+	<primary_language_string>
+		<string_with_language xsi:nil="true" ref="id-315"/>
+	</primary_language_string>
+</multi_language_string>
+
+<value_range id="id-316">
+	<value_name>/ignore</value_name>
+	<unit_component>
+		<unit xsi:nil="true" ref="id-14"/>
+	</unit_component>
+	<lower_limit>28</lower_limit>
+	<upper_limit>35</upper_limit>
+</value_range>
+
+<language id="id-207">
+	<country_code>gbr</country_code>
+	<language_code>eng</language_code>
+</language>
+
+<language id="id-284">
+	<country_code>swe</country_code>
+	<language_code>swe</language_code>
+</language>
+
+<digital_document id="id-343">
+	<associated_document_version>
+		<document_version xsi:nil="true" ref="id-121"/>
+	</associated_document_version>
+	<common_location>
+		<document_location_property xsi:nil="true" ref="id-185"/>
+	</common_location>
+	<content>
+		<document_content_property xsi:nil="true" ref="id-206"/>
+	</content>
+	<creation>
+		<document_creation_property xsi:nil="true" ref="id-89"/>
+	</creation>
+	<Id>984327-a-1</Id>
+	<representation_format>
+		<document_format_property xsi:nil="true" ref="id-174"/>
+	</representation_format>
+	<file>
+		<digital_file xsi:nil="true" ref="id-255"/>
+	</file>
+</digital_document>
+
+<digital_document id="id-344">
+	<associated_document_version>
+		<document_version xsi:nil="true" ref="id-124"/>
+	</associated_document_version>
+	<common_location></common_location>
+	<Id>doc-tool456-1-1</Id>
+	<file>
+		<digital_file xsi:nil="true" ref="id-260"/>
+	</file>
+</digital_document>
+
+<digital_document id="id-345">
+	<associated_document_version>
+		<document_version xsi:nil="true" ref="id-126"/>
+	</associated_document_version>
+	<common_location></common_location>
+	<Id>doc-tool678-1-1</Id>
+	<file>
+		<digital_file xsi:nil="true" ref="id-197"/>
+	</file>
+</digital_document>
+
+<property_relationship id="id-346">
+	<related>
+		<property xsi:nil="true" ref="id-74"/>
+	</related>
+	<relating>
+		<property xsi:nil="true" ref="id-72"/>
+	</relating>
+	<relation_type>substitution</relation_type>
+</property_relationship>
+
+<item_version id="id-82">
+	<associated_item>
+		<item xsi:nil="true" ref="id-139"/>
+	</associated_item>
+	<Id>984327-1-a</Id>
+</item_version>
+
+<item_version id="id-132">
+	<associated_item>
+		<item xsi:nil="true" ref="id-142"/>
+	</associated_item>
+	<Id>576321-1-b</Id>
+</item_version>
+
+<item_version id="id-320">
+	<associated_item>
+		<item xsi:nil="true" ref="id-144"/>
+	</associated_item>
+	<Id>63214871-1</Id>
+</item_version>
+
+<item_version id="id-254">
+	<associated_item>
+		<item xsi:nil="true" ref="id-146"/>
+	</associated_item>
+	<Id>tool123-1</Id>
+</item_version>
+
+<item_version id="id-225">
+	<associated_item>
+		<item xsi:nil="true" ref="id-139"/>
+	</associated_item>
+	<Id>984327-1-b</Id>
+</item_version>
+
+<item_version id="id-227">
+	<associated_item>
+		<item xsi:nil="true" ref="id-139"/>
+	</associated_item>
+	<Id>984327-2-a</Id>
+</item_version>
+
+<item_version id="id-321">
+	<associated_item>
+		<item xsi:nil="true" ref="id-149"/>
+	</associated_item>
+	<Id>8327-1</Id>
+</item_version>
+
+<item_version id="id-233">
+	<associated_item>
+		<item xsi:nil="true" ref="id-151"/>
+	</associated_item>
+	<Id>29843435.1</Id>
+</item_version>
+
+<item_version id="id-232">
+	<associated_item>
+		<item xsi:nil="true" ref="id-153"/>
+	</associated_item>
+	<Id>a54b67-a</Id>
+</item_version>
+
+<item_version id="id-230">
+	<associated_item>
+		<item xsi:nil="true" ref="id-155"/>
+	</associated_item>
+	<Id>765432-1</Id>
+</item_version>
+
+<item_version id="id-229">
+	<associated_item>
+		<item xsi:nil="true" ref="id-157"/>
+	</associated_item>
+	<Id>765433-1</Id>
+</item_version>
+
+<item_version id="id-326">
+	<associated_item>
+		<item xsi:nil="true" ref="id-159"/>
+	</associated_item>
+	<Id>12346-678-1</Id>
+</item_version>
+
+<item_version id="id-328">
+	<associated_item>
+		<item xsi:nil="true" ref="id-161"/>
+	</associated_item>
+	<Id></Id>
+</item_version>
+
+<item_version id="id-327">
+	<associated_item>
+		<item xsi:nil="true" ref="id-163"/>
+	</associated_item>
+	<Id></Id>
+</item_version>
+
+<material_designation id="id-171">
+	<material_name>p</material_name>
+</material_designation>
+
+</uos>
