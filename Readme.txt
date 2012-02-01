@@ -10,19 +10,21 @@ functionality.
 ISO 13399 is intended to facilitate the use, manipulation and exchange of 
 cutting tool data within and between manufacturing, distribution, and usage.  
 ISO 13399 specifies the data representation of everything between the workpiece 
-and the machine tool. An ISO 13399 exchange file contains an electronic representation 
-of cutting tool data as defined by the information structure that can be exchanged by 
-tooling applications.
+and the machine tool. An ISO 13399 exchange file contains an electronic 
+representation of cutting tool data as defined by the information structure 
+that can be exchanged by tooling applications.
 
-ISO 13399 is defined as a Schema in the ISO 130303 Express language. The ISO 13399 
-schema develops a framework in which to define tooling properties, tooling assemblies, 
-and relationship between tooling elements.  There are no actual tooling properties 
-in the ISO 13399 schema. Instead ISO 13399 develops a programming structure in 
-which to embed ISO 13584, which is the Industrial automation systems and 
-integration – Parts library (PLIB). ISO 13399 leverages the ISO 13584 tooling parts 
-library in defining properties. ISO 13584 defines tooling reference dictionaries 
-that ISO 13399 then refers to within the definitions of tooling and their properties.  
-For example, ISO 13584-511 is a reference dictionary for threaded items defined in 
-current ISO standards. ISO 13399-5 refers to ISO 13584-511 for definitions of threaded 
-items conforming to these standards.
+ISO 13399 is defined as a Schema in the ISO 130303 Express language. 
+The ISO 13399  schema develops a framework in which to define tooling 
+properties, tooling assemblies,  and relationship between tooling elements.  
+There are no actual tooling properties  in the ISO 13399 schema. Instead 
+ISO 13399 develops a programming structure in  which to embed ISO 13584, 
+which is the Industrial automation systems and  integration – Parts 
+library (PLIB). ISO 13399 leverages the ISO 13584 tooling parts  library 
+in defining properties. ISO 13584 defines tooling reference dictionaries  
+that ISO 13399 then refers to within the definitions of tooling and their 
+properties.   For example, ISO 13584-511 is a reference dictionary for 
+threaded items defined in  current ISO standards. ISO 13399-5 refers 
+to ISO 13584-511 for definitions of threaded  items conforming 
+to these standards. 
 
